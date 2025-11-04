@@ -11,7 +11,7 @@ fetch("../../include/header.html")
 });
 // 헤더 관련
 function initHeader(){
-
+ 
 }
 // footer fetch
 fetch("../../include/footer.html")
