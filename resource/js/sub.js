@@ -397,36 +397,3 @@ function calendar(){
 
 
 
-// 두 개의 fetch 요청 완료 여부를 추적할 플래그 선언
-let isHeaderLoaded = false;
-let isFooterLoaded = false;
-
-// header fetch
-fetch("../../include/header.html")
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector(".sub_header").innerHTML = data;
-        isHeaderLoaded = true;  // header 로드 완료 표시
-        checkAndRunScan();
-        
-        // header에만 필요한 함수 호출
-        brad();
-        sideMenu();
-        race();
-    });
-
-// footer fetch
-fetch("../../include/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector(".sub_footer").innerHTML = data;
-        isFooterLoaded = true;  // footer 로드 완료 표시
-        checkAndRunScan();
-    });
-
-// 두 개의 fetch 요청이 모두 완료되면 scan 호출
-function checkAndRunScan() {
-    if (isHeaderLoaded && isFooterLoaded) {
-        scan();
-    }
-}
