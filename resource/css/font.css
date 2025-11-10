@@ -1,144 +1,83 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'notokr';
-    src: url('../font/notokr-light.eot');
-    src: url('../font/notokr-light.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-light.woff2') format('woff2'),
-    url('../font/notokr-light.woff') format('woff'),
-    url('../font/notokr-light.ttf') format('truetype'),
-    url('../font/notokr-light.svg#notokr-light') format('svg');
-    font-weight: 200;
-    font-style: normal;
-
+	font-family: 'GyeonggiBatang';
+	font-weight: normal;
+	font-display: swap;
+	src: url('../font/GyeonggiBatang-Bold.otf') format('woff');
 }
-@font-face {
-    font-family: 'notokr';
-    src: url('../font/notokr-demilight.eot');
-    src: url('../font/notokr-demilight.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-demilight.woff2') format('woff2'),
-    url('../font/notokr-demilight.woff') format('woff'),
-    url('../font/notokr-demilight.ttf') format('truetype'),
-    url('../font/notokr-demilight.svg#notokr-demilight') format('svg');
-    font-weight: 300;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'notokr';
-    src: url('../font/notokr-regular.eot');
-    src: url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-regular.woff2') format('woff2'),
-    url('../font/notokr-regular.woff') format('woff'),
-    url('../font/notokr-regular.ttf') format('truetype'),
-    url('../font/notokr-regular.svg#notokr-regular') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'notokr';
-    src: url('../font/notokr-medium.eot');
-    src: url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-medium.woff2') format('woff2'),
-    url('../font/notokr-medium.woff') format('woff'),
-    url('../font/notokr-medium.ttf') format('truetype'),
-    url('../font/notokr-medium.svg#notokr-medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'notokr';
-    src: url('../font/notokr-bold.eot');
-    src: url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
-    url('../font/notokr-bold.woff2') format('woff2'),
-    url('../font/notokr-bold.woff') format('woff'),
-    url('../font/notokr-bold.ttf') format('truetype'),
-    url('../font/notokr-bold.svg#notokr-bold') format('svg');
-    font-weight: 600;
-    font-style: normal;
-    
-}
-
 
 
 @font-face {
-    font-family: 'Noto Serif KR';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Light.woff) format('woff');
+	font-family: 'GyeonggiBatang';
+	font-weight: normal;
+	font-display: swap;
+	src: url('../font/GyeonggiBatang-Regular.otf') format('woff');
 }
-@font-face {
-    font-family: 'Noto Serif KR';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Medium.woff) format('woff');
-}
-@font-face {
-    font-family: 'Noto Serif KR';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Bold.woff) format('woff');
-}
-
-
-/* @font-face {
-    font-family: 'NotoSerifKR';
-    src: url('../font/NotoSerifKR-light.eot');
-    src: url('../font/NotoSerifKR-light.eot?#iefix') format('embedded-opentype'),
-    url('../font/NotoSerifKR-light.woff2') format('woff2'),
-    url('../font/NotoSerifKR-light.woff') format('woff'),
-    url('../font/NotoSerifKR-light.ttf') format('truetype'),
-    url('../font/NotoSerifKR-light.svg#NotoSerifKR-light') format('svg');
-    font-weight: 200;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'NotoSerifKR';
-    src: url('../font/NotoSerifKR-demilight.eot');
-    src: url('../font/NotoSerifKR-demilight.eot?#iefix') format('embedded-opentype'),
-    url('../font/NotoSerifKR-demilight.woff2') format('woff2'),
-    url('../font/NotoSerifKR-demilight.woff') format('woff'),
-    url('../font/NotoSerifKR-demilight.ttf') format('truetype'),
-    url('../font/NotoSerifKR-demilight.svg#NotoSerifKR-demilight') format('svg');
-    font-weight: 300;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'NotoSerifKR';
-    src: url('../font/NotoSerifKR-regular.eot');
-    src: url('../font/NotoSerifKR-regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/NotoSerifKR-regular.woff2') format('woff2'),
-    url('../font/NotoSerifKR-regular.woff') format('woff'),
-    url('../font/NotoSerifKR-regular.ttf') format('truetype'),
-    url('../font/NotoSerifKR-regular.svg#NotoSerifKR-regular') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'NotoSerifKR';
-    src: url('../font/NotoSerifKR-medium.eot');
-    src: url('../font/NotoSerifKR-medium.eot?#iefix') format('embedded-opentype'),
-    url('../font/NotoSerifKR-medium.woff2') format('woff2'),
-    url('../font/NotoSerifKR-medium.woff') format('woff'),
-    url('../font/NotoSerifKR-medium.ttf') format('truetype'),
-    url('../font/NotoSerifKR-medium.svg#NotoSerifKR-medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-
-} */
 
 @font-face {
-    font-family: 'NotoSerifKR';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: url('../font/Pretendard-Black.woff') format('woff');;
 }
 
 
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: url('../font/Pretendard-ExtraBold.woff') format('woff');;
+}
 
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: url('../font/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src:url('../font/Pretendard-SemiBold.woff') format('woff');;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: url('../font/Pretendard-Medium.woff') format('woff');;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../font/Pretendard-Regular.woff') format('woff');;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: url('../font/Pretendard-Light.woff') format('woff');;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: url('../font/Pretendard-ExtraLight.woff') format('woff');;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: url('../font/Pretendard-Thin.woff') format('woff');;
+}
 
 
 

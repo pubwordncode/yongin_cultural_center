@@ -14,10 +14,15 @@
 
   <!-- style -->
 
-  <link type="text/css" rel="stylesheet" href="./resource/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="./resource/css/swiper.min.css">
-    <link type="text/css" rel="stylesheet" href="./resource/css/ux-common.css">
+  <link type="text/css" rel="stylesheet" href="./resource/css/base.css">
+
   <style>
+    body {
+      width: 100%;
+      max-width: none !important;
+      overflow-y: auto;
+    }
+
     b {
       margin-left: 10px;
     }
@@ -38,19 +43,20 @@
       font-size: 18px;
       margin-bottom: 20px;
       display: block;
-      width:100%;
+      width: 100%;
     }
 
     .test-section {
       border-top: 2px solid #ddd;
       padding: 50px;
     }
-    .test-section-sub{
-      display:flex;
+
+    .test-section-sub {
+      display: flex;
       flex-wrap: wrap;
-      gap:3rem;
+      gap: 3rem;
     }
-    
+
     .test-section-sub+.test-section-sub {
       margin-top: 20px;
       border-top: 1px dashed #ddd;
@@ -99,13 +105,73 @@
     .test-links+h2.test-title {
       margin-top: 20px;
     }
-    .test-section--item{
+
+    .test-section--item {
       display: flex;
       flex-direction: column;
-      
+
     }
-    .flex-wrap{
-      flex-wrap:wrap;
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .tag__item {
+      margin-top: 10px;
+    }
+
+    .section-item {
+      border: 1px dashed #d326d3;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* color */
+    .item-sub {
+      width: 80px;
+    }
+
+    .item-name {
+      text-align: center;
+      display: block;
+    }
+
+    .block-wrap .item,
+    .block-wrap .item-feature,
+    .block-wrap .item-name {
+      width: 100%;
+      height: auto;
+      text-align: left;
+    }
+
+    .block-wrap .item-name {
+      color: #575757;
+    }
+
+    .item {
+      width: 106px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .item-feature {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 10px 5px;
     }
   </style>
   <!-- //style -->
@@ -113,917 +179,233 @@
 
 <body>
   <div id="wrap">
-    <div style="display: table"></div>
-
-    <h1 class="test-title">Component</h1>
-
-    <!-- 220811 timepick 적용
-      https://www.jqueryscript.net/demo/time-picker-bootstrap/
-      참고했습니다.
-      -->
-      
-      <div class="test-section test-section--button">
-      
-        <h3 class="test-title">button</h3>
-        <div class="test-section-sub flex-wrap">
-          <button class="btn btn-apply small">적용</button>
-          <button class="btn btn-list small">목록</button>
-          <button class="btn btn-list small" disabled>목록</button>
-          <button class="btn btn-download small">다운로드</button>
-          <button class="btn btn-download small" disabled>다운로드</button>
-          <button class="btn btn-download large">원문 다운로드</button>
-          <button class="btn btn-download large" disabled>원문 다운로드</button>
-          <button class="btn btn-event small">행사참가</button>
-          <button class="btn btn-event small" disabled>행사참가</button>
-          <button class="btn btn-event large">행사참가</button>
-          
-
-
-          <!-- 
-          <div class="datepicker d-flex date" data-date-format="mm-dd-yyyy">
-              <button class="btn btn-datePicker"></button>
-          </div>
-          <button class="btn btn-cancel small">취소</button>
-          <button class="btn btn-remove small">삭제</button>
-          <button class="btn btn-reset small">초기화</button>
-          <button class="btn btn-allView small">전체보기</button>
-          <button class="btn btn-directMove small">사례관리 바로가기</button>
-          
-          <button class="btn btn-modify small">수정</button>
-          <button class="btn btn-write small">작성</button>
-          <button class="btn btn-regist small">등록</button>
-          <button class="btn btn-temporary small">임시저장</button>
-          <button class="btn btn-search small">검색</button>
-
-          
-          <button class="btn btn-modify large">수정</button>
-          <button class="btn btn-regist large">등록</button>
-          <button class="btn btn-temporary large">임시저장</button>
-          <button class="btn btn-writeCom large">작성완료</button>
-          <button class="btn btn-login big">로그인</button> -->
-          
+    <h1 class="test-title">Variables</h1>
+    <div class="test-section test-section--color">
+      <h3 class="test-title">Color</h3>
+      <div class="test-section-sub flex-wrap">
+        <h4 class="item-sub">Primary</h4>
+        <div class="item">
+          <p class="item-feature" style="background-color: #420D0E;"></p>
+          <span class="item-name">$primary900</span>
         </div>
-        
-        <div class="test-section-sub">
-  
-          
-          <h3 class="test-title">search bar(sub)</h3>
-          <div class="custom-select sub w-150">
-            <div class="selected">전체 발간물</div>
-            <ul class="options">
-                <li data-value="option1">옵션1</li>
-                <li data-value="option2">옵션2</li>
-                <li data-value="option3">옵션3</li>
-                <li data-value="option4">옵션4</li>
-            </ul>
-          </div>
-          <div class="custom-select sub w-120">
-            <div class="selected">전체</div>
-            <ul class="options">
-              <li data-value="option1">옵션1</li>
-              <li data-value="option2">옵션2</li>
-              <li data-value="option3">옵션3</li>
-              <li data-value="option4">옵션4</li>
-            </ul>
-          </div>
-
-          <div class="custom-select sub w-130">
-            <div class="selected">발간년도</div>
-            <ul class="options">
-              <li data-value="option1">옵션1</li>
-              <li data-value="option2">옵션2</li>
-              <li data-value="option3">옵션3</li>
-              <li data-value="option4">옵션4</li>
-            </ul>
-          </div>
-
-
-          <div class="sch-bar sub w-430">
-            <input type="text" class="search-input" placeholder="검색어를 입력해주세요">
-            <button class="search-button"></button>
-          </div>
-
-          <div class="custom-select sub w-150 checked">
-            <div class="selected"><span class="count">0</span>개 선택됨</div>
-            <ul class="options">
-              <li data-value="option1">
-                <div class="ui-checkbox-block">
-                  <input type="checkbox" class="ui-checkbox" id="checkbox1">
-                  <label for="checkbox1" class="ui-label">
-                    <span class="ui-label__text">opt</span>
-                  </label>
-                </div>
-              </li>
-              <li data-value="option2">
-                <div class="ui-checkbox-block">
-                  <input type="checkbox" class="ui-checkbox" id="checkbox2">
-                  <label for="checkbox2" class="ui-label">
-                    <span class="ui-label__text">opt</span>
-                  </label>
-                </div>
-              </li>
-              <li data-value="option3">
-                <div class="ui-checkbox-block">
-                  <input type="checkbox" class="ui-checkbox" id="checkbox3">
-                  <label for="checkbox3" class="ui-label">
-                    <span class="ui-label__text">opt</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </div>
-        
+        <div class="item">
+          <p class="item-feature" style="background-color: #581213;"></p>
+          <span class="item-name">$primary800</span>
         </div>
-
-        <div class="test-section-sub">
-  
-          <div class="test-section--item">
-            <h3 class="test-title">tab</h3>
-
-            <div class="tabMenu">
-              <ul class="tab__list">
-                  <li class="tab__item"><a href="#" class="tab__link">개요</a></li>
-                  <li class="tab__item"><a href="#" class="tab__link">인사말</a></li>
-                  <li class="tab__item"><a href="#" class="tab__link">Tab 3</a></li>
-              </ul>
-              <div class="tab-content">
-                  <div class="tab-panel">Content for Tab 1</div>
-                  <div class="tab-panel">Content for Tab 2</div>
-                  <div class="tab-panel">Content for Tab 3</div>
-              </div>
-            </div>
-
-          </div>
+        <div class="item">
+          <p class="item-feature" style="background-color: #841A1C;"></p>
+          <span class="item-name">$primary700</span>
         </div>
-
-
-        <div class="test-section-sub">
-  
-          <div class="test-section--item">
-            <h3 class="test-title">아코디언</h3>
-
-            <div class="accordion">
-                <div class="accordion-item">
-                  <div class="accordion-header">개요</div>
-                  <div class="accordion-content">내용 1입니다.</div>
-                </div>
-                <div class="accordion-item">
-                  <div class="accordion-header">인사말</div>
-                  <div class="accordion-content">내용 2입니다.</div>
-                </div>
-            </div>
-
-          </div>
+        <div class="item">
+          <p class="item-feature" style="background-color: #B12326;"></p>
+          <span class="item-name">$primary600</span>
         </div>
-
-
-        <div class="test-section-sub">
-          <div class="test-section--item">
-            <h3 class="test-title">paging</h3>
-            <div class="pagination-wrap">
-              <div class="pagination">
-                  <a href="javascript:void(0)" class="link-move link-first"></a>
-                  <a href="javascript:void(0)" class="link-move link-prev"></a>
-                  <!-- <a href="javascript:void(0)" class="list-circle"></a> -->
-                  <a href="javascript:void(0)" class="on">1</a>
-                  <a href="javascript:void(0)">2</a>
-                  <a href="javascript:void(0)">3</a>
-                  <a href="javascript:void(0)">4</a>
-                  <a href="javascript:void(0)">5</a>
-                  <a href="javascript:void(0)">6</a>
-                  <a href="javascript:void(0)">7</a>
-                  <a href="javascript:void(0)">8</a>
-                  <a href="javascript:void(0)">9</a>
-                  <a href="javascript:void(0)">10</a>
-                  <!-- <a href="javascript:void(0)" class="list-circle"></a> -->
-                  <a href="javascript:void(0)" class="link-move link-next"></a>
-                  <a href="javascript:void(0)" class="link-move link-last"></a>
-              </div>
-            </div>
-          </div>
-          <div class="test-section--item">
-            <h3 class="test-title">paging on</h3>
-            <div class="pagination-wrap">
-              <div class="pagination">
-                  <a href="javascript:void(0)" class="link-move link-first on"></a>
-                  <a href="javascript:void(0)" class="link-move link-prev on"></a>
-                  <!-- <a href="javascript:void(0)" class="list-circle"></a> -->
-                  <a href="javascript:void(0)" class="on">1</a>
-                  <a href="javascript:void(0)">2</a>
-                  <a href="javascript:void(0)">3</a>
-                  <a href="javascript:void(0)">4</a>
-                  <a href="javascript:void(0)">5</a>
-                  <a href="javascript:void(0)">6</a>
-                  <a href="javascript:void(0)">7</a>
-                  <a href="javascript:void(0)">8</a>
-                  <a href="javascript:void(0)">9</a>
-                  <a href="javascript:void(0)">10</a>
-                  <!-- <a href="javascript:void(0)" class="list-circle"></a> -->
-                  <a href="javascript:void(0)" class="link-move link-next on"></a>
-                  <a href="javascript:void(0)" class="link-move link-last on"></a>
-              </div>
-            </div>
-          </div>
+        <div class="item">
+          <p class="item-feature" style="background-color: #DD2C2F;"></p>
+          <span class="item-name">$primary500</span>
         </div>
-
-
-        <div class="test-section-sub">
-          <div class="test-section--item">
-            <h3 class="test-title">lists bar</h3>
-            <ul class="lists bar">
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-            </ul>
-          </div>
-          <div class="test-section--item">
-            <h3 class="test-title">lists num</h3>
-            <ul class="lists num">
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-            </ul>
-          </div>
-  
-          <div class="test-section--item">
-            <h3 class="test-title">lists num cir</h3>
-            <ul class="lists num cir">
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-              <li>dd</li>
-            </ul>
-          </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #E45659;"></p>
+          <span class="item-name">$primary400</span>
         </div>
-
-
-      </div>
-
-      
-
-
-
-    
-
-
-    <div class="test-section test-section--button">
-      
-      <h2 class="test-title">form</h2>
-
-      <div class="test-section-sub">
-        <div class="test-section--item">
-          <h3 class="test-title">checkbox</h3>
-          
-
-          <div class="ui-form">
-            <div class="ui-checkbox-block-wrap">
-              <div class="ui-checkbox-block">
-                <input type="checkbox" class="ui-checkbox" id="checkbox1">
-                <label for="checkbox1" class="ui-label">
-                  
-                  <span class="ui-label__text">opt</span>
-                </label>
-              </div>
-              <div class="ui-checkbox-block">
-                <input type="checkbox" class="ui-checkbox" id="checkbox2">
-                <label for="checkbox2" class="ui-label">
-                  
-                  <span class="ui-label__text">opt</span>
-                </label>
-              </div>
-            </div>
-            
-          </div>
-
+        <div clas="item">
+          <p class="item-feature" style="background-color: #EB8082;"></p>
+          <span class="item-name">$primary300</span>
         </div>
-
-        <div class="test-section--item">
-          <h3 class="test-title">checkbox-row</h3>
-          <div class="ui-form">
-            <div class="ui-checkbox-block-wrap row">
-              <div class="ui-checkbox-block">
-                <input type="checkbox" class="ui-checkbox" id="checkbox1">
-                <label for="checkbox1" class="ui-label">
-                  
-                  <span class="ui-label__text">opt</span>
-                </label>
-              </div>
-              <div class="ui-checkbox-block">
-                <input type="checkbox" class="ui-checkbox" id="checkbox2">
-                <label for="checkbox2" class="ui-label">
-                  
-                  <span class="ui-label__text">opt</span>
-                </label>
-              </div>
-            </div>
-            
-          </div>
-
+        <div clas="item">
+          <p class="item-feature" style="background-color: #F1ABAC;"></p>
+          <span class="item-name">$primary200</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #F8D5D5;"></p>
+          <span class="item-name">$primary100</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FFEBED;"></p>
+          <span class="item-name">$primary50</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FFF5F6;"></p>
+          <span class="item-name">$primary0</span>
         </div>
       </div>
-
-      <div class="test-section-sub">
-        <div class="test-section--item">
-          <h3 class="test-title">radio</h3>
-          <div class="ui-form">
-
-            <div class="ui-radio-block-wrap">
-              <div class="ui-radio-block">
-                <!-- 2022.08.30 : mod : name="radio1" 추가 -->
-                <input type="radio" class="ui-radio" id="radio1" name="radio1">
-                <label for="radio1" class="ui-label">
-                  <span class="ui-radio-object"></span>
-                  <span class="ui-label__text">등록</span>
-                </label>
-              </div>
-              <div class="ui-radio-block">
-                <!-- 2022.08.30 : mod : name="radio1" 추가 -->
-                <input type="radio" class="ui-radio" id="radio2" name="radio1">
-                <label for="radio2" class="ui-label">
-                  <span class="ui-radio-object"></span>
-                  <span class="ui-label__text">삭제</span>
-                </label>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
+      <div class="test-section-sub flex-wrap">
+        <h4 class="item-sub">secondary</h4>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #3F1F08;"></p>
+          <span class="item-name">$secondary900</span>
         </div>
-
-        <div class="test-section--item">
-          <h3 class="test-title">radio row</h3>
-          <div class="ui-form">
-
-            <div class="ui-radio-block-wrap row">
-              <div class="ui-radio-block">
-                <input type="radio" class="ui-radio" id="radio1" name="radio1">
-                <label for="radio1" class="ui-label">
-                  <span class="ui-radio-object"></span>
-                  <span class="ui-label__text">등록</span>
-                </label>
-              </div>
-              <div class="ui-radio-block">
-                <input type="radio" class="ui-radio" id="radio2" name="radio1">
-                <label for="radio2" class="ui-label">
-                  <span class="ui-radio-object"></span>
-                  <span class="ui-label__text">삭제</span>
-                </label>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
+        <div clas="item">
+          <p class="item-feature" style="background-color: #64320D;"></p>
+          <span class="item-name">$secondary800</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #964A14;"></p>
+          <span class="item-name">$secondary700</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #C8631A;"></p>
+          <span class="item-name">$secondary600</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FA7C21;"></p>
+          <span class="item-name">$secondary500</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FB964D;"></p>
+          <span class="item-name">$secondary400</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FCB07A;"></p>
+          <span class="item-name">$secondary300</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FDCBA6;"></p>
+          <span class="item-name">$secondary200</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FEE5D3;"></p>
+          <span class="item-name">$secondary100</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FFF2E9;"></p>
+          <span class="item-name">$secondary50</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FFF9F4;"></p>
+          <span class="item-name">$secondary0</span>
         </div>
       </div>
+      <div class="test-section-sub flex-wrap">
+        <h4 class="item-sub">Neutral</h4>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #000;"></p>
+          <span class="item-name">$black</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #333;"></p>
+          <span class="item-name">$Neutral500</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #575757;"></p>
+          <span class="item-name">$Neutral400</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #888;"></p>
+          <span class="item-name">$Neutral300</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #CACACA;"></p>
+          <span class="item-name">$Neutral200</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #E8E8E8;"></p>
+          <span class="item-name">$Neutral150</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #EEE;"></p>
+          <span class="item-name">$Neutral100</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #E8E8E8;"></p>
+          <span class="item-name">$Neutral50</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #FAFAFA;"></p>
+          <span class="item-name">$Neutral0</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #fff; border:1px solid #333"></p>
+          <span class="item-name">$white</span>
+        </div>
+      </div>
+      <div class="test-section-sub flex-wrap">
+        <h4 class="item-sub">System</h4>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #DD2C2F;"></p>
+          <span class="item-name">$danger</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #F6CA2D;"></p>
+          <span class="item-name">$warning</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #33BC51;"></p>
+          <span class="item-name">$success</span>
+        </div>
+        <div clas="item">
+          <p class="item-feature" style="background-color: #4263EB;"></p>
+          <span class="item-name">$info</span>
+        </div>
 
-      <div class="test-section-sub">
-        
-
-        <div class="test-section--item">
-          <h3 class="test-title">phone form</h3>
-          
-
-          <div class="form-flex">
-            <div class="form-flex-cell">
-              <div class="ui-select-block input-width-75">
-                <select class="ui-select" title="전화번호 1">
-                  <option value="">010</option>
-                  <option value="">option 2</option>
-                  <option value="">option 3</option>
-                  <option value="">option 4</option>
-                  <option value="">option 5</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
-            <div class="form-flex-cell">
-              <div class="ui-input-block input-width-75">
-                <input type="number" class="ui-input" title="전화번호 2">
-              </div>
-            </div>
-            <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
-            <div class="form-flex-cell">
-              <div class="ui-input-block input-width-75">
-                <input type="number" class="ui-input" title="전화번호 3">
-              </div>
-            </div>
-          </div>
-          
-          
-
-        </div>
-      </div>
-
-      <div class="test-section-sub">
-        
-
-        <div class="test-section--item">
-          <h3 class="test-title">File input</h3>
-          
-
-          <div class="ui-file-input">
-            <div class="ui-file-input__inner">
-              <input type="file" class="ui-file-input__input" id="file1">
-              <label for="file1" class="ui-file-input__label">찾아보기</label>
-            </div>
-          </div>
-          
-          <div class="ui-file-input">
-            <div class="ui-file-input__inner">
-              <input type="file" class="ui-file-input__input" id="file2" disabled="">
-              <label for="file2" class="ui-file-input__label">찾아보기</label>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      
-    </div>
-
-    <div class="test-section test-section--input-width">
-      
-      <h2 class="test-title">Input width(input-width-숫자 : 필요한 너비값이 없으면 css에 클래스 추가하여 사용)</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">tiny</h3>
-        <div class="ui-input-block input-width-tiny">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small-mini</h3>
-        <div class="ui-input-block input-width-small-mini">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small</h3>
-        <div class="ui-input-block input-width-small">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">regular</h3>
-        <div class="ui-input-block input-width-regular">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">medium</h3>
-        <div class="ui-input-block input-width-medium">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">large</h3>
-        <div class="ui-input-block input-width-large">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">big</h3>
-        <div class="ui-input-block input-width-big">
-          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
-        </div>
-      </div>
-      
-    </div>
-
-    <div class="test-section test-section--input-height">
-      
-      <h2 class="test-title">Input height</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">mini</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-small" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small-regular</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-small-regular" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small-medium</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-small-medium" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">small-large</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-small-large" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">regular</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-regular" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">large</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-large" title="title" placeholder="placeholder"></textarea>
-        </div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">input-height-숫자 : 필요한 높이값이 없으면 css에 클래스 추가하여 사용</h3>
-        <div class="ui-input-block">
-          <textarea class="ui-input input-height-76" title="title" placeholder="placeholder"></textarea>
-        </div>
       </div>
     </div>
 
-
-    <div class="test-section test-section--radio-tab">
-      
-      <h2 class="test-title">Radio Tab</h2>
+    <h1 class="test-title">Base</h1>
+    <div class="test-section test-section--typo">
+      <h3 class="test-title">Typography</h3>
       <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-        <!---->
-        <div class="js-ui-tab-panel">
-          <div class="board-tab">
-            <ul class="board-tab__list">
-              <li class="board-tab__item">
-                <a href="javascript:void(0)" class="board-tab__link" data-tab-open="tab1">수사/재판자료 보고서</a>
-              </li>
-              <li class="board-tab__item">
-                <a href="javascript:void(0)" class="board-tab__link" data-tab-open="tab2">수사/재판자료 이력</a>
-              </li>
-            </ul>
+        <h4 class="item-sub">bold</h4>
+        <div class="block-wrap">
+          <div class="item">
+            <span class="item-name">txt-bold-depth--01</span>
+            <p class="item-feature txt txt-bold-depth--01">페이지 타이틀, 최상의 제목</p>
           </div>
-
-          
-          <div class="board-tab-panel" data-tab="tab1">
-            컨텐츠1
+          <div class="item">
+            <span class="item-name">txt-bold-depth--02</span>
+            <p class="item-feature txt txt-bold-depth--02">주요 섹션 제목</p>
           </div>
-          
-          <div class="board-tab-panel" data-tab="tab2">
-            컨텐츠2
+          <div class="item">
+            <span class="item-name">txt-bold-depth--03</span>
+            <p class="item-feature txt txt-bold-depth--03">서브 섹션 제목</p>
           </div>
-          
-        </div>
-
-        <!---->
-      </div>
-    </div>
-
-
-    <div class="test-section test-section--search-bar">
-      <h2 class="test-title">Search bar</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-          <section class="search-bar">
-            <h2 class="for-a11y">검색</h2>
-            <div class="search-bar__left">
-              <div class="search-bar__row">
-                <dl class="search-bar__item search-bar__item--flexible">
-                  <dt class="search-bar__key">title</dt>
-                  <dd class="search-bar__val">
-                    <div class="ui-select-block">
-                      <select class="ui-select" title="title">
-                        <option value="">50분</option>
-                        <option value="">option 2</option>
-                        <option value="">option 3</option>
-                        <option value="">option 4</option>
-                        <option value="">option 5</option>
-                      </select>
-                    </div>
-                  </dd>
-                </dl>
-                <dl class="search-bar__item search-bar__item--flexible">
-                  <dt class="search-bar__key">title</dt>
-                  <dd class="search-bar__val">
-                    <div class="ui-select-block">
-                      <select class="ui-select" title="title">
-                        <option value="">1분</option>
-                        <option value="">option 2</option>
-                        <option value="">option 3</option>
-                        <option value="">option 4</option>
-                        <option value="">option 5</option>
-                      </select>
-                    </div>
-                  </dd>
-                </dl>
-                <dl class="search-bar__item search-bar__item--flexible">
-                  <dt class="search-bar__key">title</dt>
-                  <dd class="search-bar__val">
-                    <div class="ui-select-block">
-                      <select class="ui-select" title="title">
-                        <option value="">구분</option>
-                        <option value="">option 2</option>
-                        <option value="">option 3</option>
-                        <option value="">option 4</option>
-                        <option value="">option 5</option>
-                      </select>
-                    </div>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-            <div class="search-bar__right">
-              <div class="ui-buttons ui-buttons--center">
-                <ul class="ui-buttons__list">
-                  <li class="ui-buttons__item">
-                    <button type="button"
-                      class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
-                  </li>
-                  <li class="ui-buttons__item">
-                    <button type="submit"
-                      class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">full</h3>
-        <section class="search-bar search-bar--full">
-          <h2 class="for-a11y">검색</h2>
-          <div class="search-bar__left">
-            <div class="search-bar__row">
-              <dl class="search-bar__item search-bar__item--flexible">
-                <dt class="search-bar__key">title</dt>
-                <dd class="search-bar__val">
-                  <div class="ui-input-block">
-                    <input type="text" class="ui-input" title="title" placeholder="placeholder">
-                  </div>
-                </dd>
-              </dl>
-              
-            </div>
+          <div class="item">
+            <span class="item-name">txt-bold-depth--04</span>
+            <p class="item-feature txt txt-bold-depth--04">보조 타이틀</p>
           </div>
-          <div class="search-bar__right">
-            <div class="ui-buttons ui-buttons--center">
-              <ul class="ui-buttons__list">
-                <li class="ui-buttons__item">
-                  <button type="button"
-                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
-                </li>
-                <li class="ui-buttons__item">
-                  <button type="submit"
-                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
-                </li>
-              </ul>
-            </div>
+          <div class="item">
+            <span class="item-name">txt-bold-depth--05</span>
+            <p class="item-feature txt txt-bold-depth--05">카드 타이틀, 대화형 블록 제목</p>
           </div>
-        </section>
-      </div>
-
-    </div>
-
-
-    <div class="test-section test-section--require-message">
-      <h2 class="test-title">Require mark</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-        <span class="ui-require"><span class="for-a11y">(필수)</span></span>
-        <span class="ui-require ui-require--medium"><span class="for-a11y">(필수)</span></span>
-      </div>
-    </div>
-
-    <div class="test-section test-section--require-message">
-      <h2 class="test-title">Require message</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-        <p class="ui-require-message">유효성 메시지입니다.</p>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div class="test-section test-section--scroller">
-      <h2 class="test-title">Scroller</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-
-        
-
-
-        <div class="y-scroll ui-scroller">
-          <p class="pop-tit" id="subject1">제2대 대통령 취임식 1952.8.15</p>
-          <p class="pop-txt" id="content1">대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-
-          </p>
-        </div>
-
-        <div class="y-scroll ui-scroller">
-          <p class="pop-tit" id="subject1">제2대 대통령 취임식 1952.8.15</p>
-          <p class="pop-txt" id="content1">대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-            대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와대한민국 역사상 초유의 총선거인 5.10 총선거 직후 제헌국회가 소집되었고 이승만은 의장으로 선출되어 대한민국 헌법과 정부조직법의 제정작업을 총괄했다. 제헌헌법은 자유와 평등권, 권력 분립에 의한 견제와 균형 등 근대 자유민주주의 헌법의 핵심요소를 모두 내포하였고 대통령제의 정치제체와
-
-          </p>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="test-section test-section--info-cell">
-      <h2 class="test-title">Info cell</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">Default</h3>
-        <div class="board-detail-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>특이사항</th>
-                <td>
-                  <div class="info-cell">
-                    <div class="info-cell__inner">
-                      없는 뼈 목숨이 쓸쓸한 인간은 그들은 오아이스도 이상을 황금시대의 황금시대다. 역사를 하였으며, 고행을 가지에 얼음에 얼음이 별과 피다. 찾아 놀이 그들의 대고, 피어나는
-                      무엇을 살
-                      보라. 품으며, 얼마나 주는 되는 끓는 되려니와, 힘차게 행복스럽고 뿐이다. 있으며, 그들은 피어나기 끓는 꽃이 위하여서 싸인 못하다 황금시대다. 동산에는 싸인 꽃이 있는가?
-                      날카로우나
-                      이상을 끝에 가치를 있는가? 천고에 그들에게 실현에 보내는 같은 방황하여도, 너의 쓸쓸하랴? 청춘의 봄날의 타오르고 천고에 영락과 이것이다. 고행을 꽃이 물방아 청춘 무엇이
-                      피에
-                      기쁘며, 가지에 황금시대다. 뜨거운지라, 그들은 이상을 천지는 고행을 그와 쓸쓸하랴?<br /><br />
-
-                      일월과 공자는 살 밝은 밥을 얼마나 피는 방황하였으며, 얼마나 보라. 스며들어 이성은 봄날의 품에 봄바람이다. 아니한 돋고, 이상의 그들은 원질이 우리의 봄바람이다. 우리는
-                      전인
-                      인간의 피부가 부패뿐이다. 끝까지 열락의 무한한 그림자는 없는 주며, 이상 그들에게 미묘한 것이다. 피어나기 이것이야말로 광야에서 말이다. 봄바람을 속에 가는 시들어 보내는
-                      끓는
-                      철환하였는가? 그들에게 우는 오아이스도 천하를 그것은 뼈 말이다. 불어 남는 사랑의 붙잡아 실현에 사막이다.<br /><br />
-
-                      뭇 새가 귀는 희망의 가는 피고 운다. 못할 만물은 긴지라 것이다. 소금이라 그러므로 길지 청춘의 천지는 얼음과 우리 황금시대다. 않는 전인 자신과 청춘 천지는 청춘의 끓는다.
-                      사라지지
-                      구하지 부패를 충분히 풀이 열락의 위하여서. 붙잡아 밥을 군영과 타오르고 피어나는 힘차게 듣는다. 방황하였으며, 든 뜨거운지라, 밥을 없는 청춘 웅대한 교향악이다. 앞이 곧
-                      구하기
-                      끓는 이것이야말로 길지 끓는 끓는다. 밥을 얼음과 만물은 눈에 미묘한 작고 봄바람이다.
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="test-section-sub">
-        <h3 class="test-title">.info-cell--height-숫자 : 필요한 높이값이 없으면 css에 클래스 추가하여 사용</h3>
-        <div class="board-detail-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>특이사항</th>
-                <td>
-                  <div class="info-cell info-cell--height-140">
-                    <div class="info-cell__inner">
-                      없는 뼈 목숨이 쓸쓸한 인간은 그들은 오아이스도 이상을 황금시대의 황금시대다. 역사를 하였으며, 고행을 가지에 얼음에 얼음이 별과 피다. 찾아 놀이 그들의 대고, 피어나는
-                      무엇을 살
-                      보라. 품으며, 얼마나 주는 되는 끓는 되려니와, 힘차게 행복스럽고 뿐이다. 있으며, 그들은 피어나기 끓는 꽃이 위하여서 싸인 못하다 황금시대다. 동산에는 싸인 꽃이 있는가?
-                      날카로우나
-                      이상을 끝에 가치를 있는가? 천고에 그들에게 실현에 보내는 같은 방황하여도, 너의 쓸쓸하랴? 청춘의 봄날의 타오르고 천고에 영락과 이것이다. 고행을 꽃이 물방아 청춘 무엇이
-                      피에
-                      기쁘며, 가지에 황금시대다. 뜨거운지라, 그들은 이상을 천지는 고행을 그와 쓸쓸하랴?<br /><br />
-
-                      일월과 공자는 살 밝은 밥을 얼마나 피는 방황하였으며, 얼마나 보라. 스며들어 이성은 봄날의 품에 봄바람이다. 아니한 돋고, 이상의 그들은 원질이 우리의 봄바람이다. 우리는
-                      전인
-                      인간의 피부가 부패뿐이다. 끝까지 열락의 무한한 그림자는 없는 주며, 이상 그들에게 미묘한 것이다. 피어나기 이것이야말로 광야에서 말이다. 봄바람을 속에 가는 시들어 보내는
-                      끓는
-                      철환하였는가? 그들에게 우는 오아이스도 천하를 그것은 뼈 말이다. 불어 남는 사랑의 붙잡아 실현에 사막이다.<br /><br />
-
-                      뭇 새가 귀는 희망의 가는 피고 운다. 못할 만물은 긴지라 것이다. 소금이라 그러므로 길지 청춘의 천지는 얼음과 우리 황금시대다. 않는 전인 자신과 청춘 천지는 청춘의 끓는다.
-                      사라지지
-                      구하지 부패를 충분히 풀이 열락의 위하여서. 붙잡아 밥을 군영과 타오르고 피어나는 힘차게 듣는다. 방황하였으며, 든 뜨거운지라, 밥을 없는 청춘 웅대한 교향악이다. 앞이 곧
-                      구하기
-                      끓는 이것이야말로 길지 끓는 끓는다. 밥을 얼음과 만물은 눈에 미묘한 작고 봄바람이다.
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <h4 class="item-sub">semibold</h4>
+        <div class="block-wrap">
+          <div class="item">
+            <span class="item-name">txt-semiBold-depth--01</span>
+            <p class="item-feature txt txt-semiBold-depth--01">강조 텍스트, 리스트 제목 등</p>
+          </div>
+          <div class="item">
+            <span class="item-name">txt-semiBold-depth--02</span>
+            <p class="item-feature txt txt-semiBold-depth--02">본문 강조폰트(Medium)</p>
+          </div>
+          <div class="item">
+            <span class="item-name">txt-semiBold-depth--03</span>
+            <p class="item-feature txt txt-semiBold-depth--03">본문 강조폰트(small)</p>
+          </div>
+        </div>
+      </div>
+      <div class="test-section-sub">
+        <h4 class="item-sub">regular</h4>
+        <div class="block-wrap">
+          <div class="item">
+            <span class="item-name">txt-regular-depth--01</span>
+            <p class="item-feature txt txt-regular-depth--01">기본 폰트(Medium)</p>
+          </div>
+          <div class="item">
+            <span class="item-name">txt-regular-depth--02</span>
+            <p class="item-feature txt txt-regular-depth--02">기본 폰트(small)</p>
+          </div>
+          <div class="item">
+            <span class="item-name">txt-regular-depth--03</span>
+            <p class="item-feature txt txt-regular-depth--03">캡션, 태그, 작은 라벨 등</p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="test-section test-section--etc">
-      <style>
-        .test-section--input .ui-input-block+.ui-input-block {
-          margin-top: 10px;
-        }
-      </style>
-      <h2 class="test-title">ETC</h2>
-      <div class="test-section-sub">
-        <h3 class="test-title">.display-block</h3>
-        <span class="display-block">&lt;span class="display-block"&gt;&lt;/span&gt;</span>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.inline-block</h3>
-        <div class="inline-block">&lt;div class="inline-block"&gt;&lt;/div&gt;</div>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.medium-text</h3>
-        <p class="medium-text">더미 텍스트</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.basic-text</h3>
-        <p class="basic-text">더미 텍스트</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.regular-text</h3>
-        <p class="regular-text">더미 텍스트</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.basic-title</h3>
-        <h4 class="basic-title">더미 텍스트</h4>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.font-weight</h3>
-        <p class="font-weight-thin">.font-weight-thin</p>
-        <p class="font-weight-light">.font-weight-light</p>
-        <p class="font-weight-regular">.font-weight-regular</p>
-        <p class="font-weight-medium">.font-weight-medium</p>
-        <p class="font-weight-bold">.font-weight-bold</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.basic-link</h3>
-        <a href="" class="basic-link">더미 텍스트</a>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.none-deco-link</h3>
-        <a href="" class="none-deco-link">더미 텍스트</a>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.link-block</h3>
-        <a href="" class="link-block">더미 텍스트</a>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.color</h3>
-        <p class="color-primary">.color-primary</p>
-        <p class="color-gray">.color-gray</p>
-        <p class="color-red">.color-red</p>
-        <p class="color-pastel-red">.color-pastel-red</p>
-        <p class="color-blue">.color-blue</p>
-        <p class="color-charcoal">.color-charcoal</p>
-        <p class="color-deep-gray">.color-deep-gray</p>
-        <p class="color-yellow">.color-yellow</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.bg-color</h3>
-        <p class="bg-color-blue" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">.bg-color-blue</p>
-        <p class="bg-color-light-blue" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">
-          .bg-color-light-blue</p>
-        <p class="bg-color-gray" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">.bg-color-gray</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.align</h3>
-        <p class="align-left">.align-left</p>
-        <p class="align-right">.align-right</p>
-        <p class="align-center">.align-center</p>
-      </div>
-      <div class="test-section-sub">
-        <h3 class="test-title">.ellipsis</h3>
-        <p class="ellipsis" style="width: 300px">.ellipsis 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미
-          텍스트</p>
-      </div>
-    </div>
-
-
-      
-
-
-
-
-      </div>
-      
-      
-    </div>
-
-   
 
 
 
@@ -1036,21 +418,18 @@
   <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
   <script type="text/javascript" src="/js/bootstrap-datepicker-ko.js"></script>
 
-    
+
   <script>
-
-
     $('.datepicker').datepicker({
-        format: 'yyyy-mm-dd',
-        language:"kr",
-        autoclose:true,
+      format: 'yyyy-mm-dd',
+      language: "kr",
+      autoclose: true,
     });
     $('.datepicker').datepicker();
-    
-    </script>
+  </script>
   <!-- //script -->
 
- 
+
 </body>
 
 </html>

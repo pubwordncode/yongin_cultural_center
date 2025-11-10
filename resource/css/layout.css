@@ -1,0 +1,113 @@
+.wrap {
+  position: relative;
+}
+
+body.fixed {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #fff;
+}
+body.fixed .wrap > div:not(header) {
+  background: #fff;
+}
+body.overflow-hidden .header {
+  border-bottom: none;
+}
+body.overflow-hidden .header.scrolled {
+  background: none;
+  backdrop-filter: unset;
+}
+body.overflow-hidden .header .header__inner {
+  display: none;
+}
+
+.wrap {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 192rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.container:after {
+  content: "";
+  width: 192rem;
+  height: 59.2rem;
+  display: block;
+  z-index: -1;
+  left: 0;
+  /* top: 0; */
+  bottom: 0;
+  position: absolute;
+  background: url(../image/main/mainBottom_bg.jpg) no-repeat center/contain;
+}
+
+.header {
+  margin: 0 auto;
+  width: 192rem;
+  max-width: 100%;
+  background: transparent;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+  height: 8.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  height: 22rem;
+  width: 192rem;
+  margin: 0 auto;
+  background: #002237;
+}
+.footer__inner {
+  gap: 0 6rem;
+  grid-gap: 0 6rem;
+  border-top: 1px solid #133143;
+  /* height: 22rem; */
+  width: 140rem;
+  padding: 5.45rem 0;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.sub-container {
+  width: 192rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.sub:after {
+  display: none !important;
+}
+
+.board-write {
+  margin-top: 2.4rem;
+  padding-top: 2.8rem;
+  padding-bottom: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid #111111;
+  border-bottom: 1px solid #A3A3A5;
+}
