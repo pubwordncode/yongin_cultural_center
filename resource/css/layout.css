@@ -56,7 +56,7 @@ body.overflow-hidden .header .header__inner {
   max-width: 100%;
   background: transparent;
   height: auto;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -64,6 +64,15 @@ body.overflow-hidden .header .header__inner {
   z-index: 99;
   height: 8.6rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 144rem;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .footer {
@@ -110,4 +119,18 @@ body.overflow-hidden .header .header__inner {
           box-sizing: border-box;
   border-top: 2px solid #111111;
   border-bottom: 1px solid #A3A3A5;
+}
+
+@media (min-width: 1025px) {
+  .side-menu {
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    -webkit-transition: unset;
+    transition: unset;
+    display: none;
+  }
 }

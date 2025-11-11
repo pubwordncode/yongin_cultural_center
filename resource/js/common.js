@@ -11,7 +11,146 @@ fetch("../../include/header.html")
 });
 // 헤더 관련
 function initHeader(){
- 
+    $(document).ready(function() {
+        // a와 b 선택
+        const $aItems = $('.navigation.depth_1 > li');
+        const $bItems = $('.depth_2');
+
+        // 배경 요소 및 header 선택
+        const $bgElement = $('.bg');
+        const $headerElement = $('.header'); // header 요소 선택
+        const $containerElement = $('.container'); // container 요소 선택
+
+        // hover 시 bg 높이를 업데이트하는 함수
+        function updateBgHeight() {
+            const headerHeight = $headerElement.outerHeight(); // header의 높이
+            let maxHeight = 0;
+
+            // 모든 depth_2의 높이를 측정하여 최대 높이 찾기
+            $bItems.each(function() {
+                maxHeight = Math.max(maxHeight, $(this).outerHeight());
+            });
+
+            // 모든 depth_2의 높이를 최대 높이에 맞춰 조정
+            $bItems.each(function() {
+                $(this).css('height', maxHeight + 'px'); // 모든 .depth_2의 높이를 최대 높이로 설정
+            });
+
+            // bg의 높이를 header의 높이 + depth_2의 최대 높이로 설정
+            $bgElement.css('height', headerHeight + maxHeight + 'px');
+        }
+
+        // navi-bg 높이 업데이트 함수
+        function updateNaviBgHeight($aItem) {
+            const headerHeight = $headerElement.outerHeight(); // header의 높이
+            const $relatedBItems = $aItem.find('.depth_2'); // 해당 aItem에 포함된 depth_2 선택
+
+            let maxHeight = 0;
+            $relatedBItems.each(function() {
+                maxHeight = Math.max(maxHeight, $(this).outerHeight()); // 해당 depth_2의 최대 높이 측정
+            });
+
+            const $naviBgElement = $aItem.find('.navi-bg'); // 해당 aItem 내의 navi-bg 요소 선택
+            $naviBgElement.css('height', headerHeight + maxHeight + 'px'); // navi-bg의 높이를 업데이트
+        }
+
+        // 초기 로드 시 bg 높이 계산
+        $bgElement.css('height', '0'); // 초기 상태에서 .bg의 높이를 0으로 설정
+
+        // a의 각 항목에 대한 이벤트 설정
+        $aItems.each(function(index) {
+            const $aItem = $(this);
+            const $bItem = $bItems.eq(index);
+
+            $aItem.on('mouseenter', function() {
+                $headerElement.addClass('active');
+                updateBgHeight(); // bg 높이 업데이트
+                updateNaviBgHeight($aItem); // navi-bg 높이 업데이트
+                $aItem.addClass('active');
+                if ($bItem.length) {
+                    $bItem.addClass('active');
+                }
+            });
+
+            $aItem.on('mouseleave', function() {
+                // aItem에서 나가면 active 클래스를 제거
+                $aItem.removeClass('active');
+                if ($bItem.length) {
+                    $bItem.removeClass('active');
+                }
+
+                // header와 bg를 모두 벗어나면 active 해제
+                if (!$headerElement.hasClass('active')) {
+                    resetBgHeight();
+                }
+            });
+        });
+
+        // b의 각 항목에 대한 이벤트 설정
+        $bItems.each(function(index) {
+            const $bItem = $(this);
+            const $aItem = $aItems.eq(index);
+
+            $bItem.on('mouseenter', function() {
+                $headerElement.addClass('active');
+                updateBgHeight(); // bg 높이 업데이트
+                updateNaviBgHeight($aItem); // navi-bg 높이 업데이트
+                $aItem.addClass('active'); // 해당 aItem의 active 상태 유지
+                $bItem.addClass('active'); // 해당 bItem의 active 상태 유지
+            });
+
+            $bItem.on('mouseleave', function(event) {
+                // .depth_2에서 나가면 active 클래스를 제거
+                $bItem.removeClass('active');
+
+                // header와 bg를 모두 벗어나면 active 해제
+                if (!$headerElement.is(event.relatedTarget) && !$bgElement.is(event.relatedTarget)) {
+                    if (!$headerElement.hasClass('active')) {
+                        resetBgHeight();
+                    }
+                }
+            });
+        });
+
+        // bg와 header를 벗어났을 때 처리
+        $(document).on('mouseleave', function(event) {
+            if (!$headerElement.is(event.relatedTarget) && !$bgElement.is(event.relatedTarget)) {
+                $headerElement.removeClass('active'); // header에서 active 클래스 제거
+                resetBgHeight(); // bg 높이 초기화
+            }
+        });
+
+        // container에 마우스가 올라갔을 때 header active 제거
+        $containerElement.on('mouseenter', function() {
+            $headerElement.removeClass('active'); // header에서 active 클래스 제거
+            resetBgHeight(); // bg 높이 초기화
+        });
+
+        // bg 높이 초기화 함수
+        function resetBgHeight() {
+            $bgElement.css('height', 'auto'); // bg의 높이는 자동으로 설정
+            // 모든 depth_2 높이를 초기 상태로 복원
+            $bItems.css('height', 'auto'); // 원래 높이로 복원
+
+            // navi-bg의 높이를 0으로 설정
+            $('.navi-bg').css('height', '0'); // 모든 navi-bg 요소 높이를 0으로 설정
+        }
+
+        $('.depth_2 > li').each(function() {
+            const $item = $(this);
+            $item.on('mouseenter', function() {
+                // Remove 'active' class from all siblings
+                $item.siblings().removeClass('active');
+                // Add 'active' class to the hovered item
+                $item.addClass('active');
+            });
+
+            $item.on('mouseleave', function() {
+                // Remove 'active' class when mouse leaves
+                $item.removeClass('active');
+            });
+        });
+    });
 }
 // footer fetch
 fetch("../../include/footer.html")
@@ -258,163 +397,18 @@ window.addEventListener('resize', function () {
 function swiperBox() {
 
 
-    var swiper = new Swiper('.mainSwiper.swiper-container', {
-        loop: true,
-        effect: 'fade',
-        pagination: {
-            el: '.mainSwiper .swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return `
-                <span class="${className}">
-                    <div class="circular-progress">
-                        <svg class="progress-circle" width="30" height="30" viewBox="0 0 36 36">
-                            <path class="circle-bg"
-                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            <path class="circle" stroke-dasharray="100, 100" stroke-dashoffset="100"
-                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                        </svg>
-                    </div>
-                    <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">${index + 1}</span>
-                </span>`;
-            }
-        },
-
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-
-        on: {
-            slideChangeTransitionStart: function () {
-                resetAllProgressCircles();
-            },
-            slideChangeTransitionEnd: function () {
-                if (isPlaying) {
-                    startProgressCircleForCurrentBullet();
-                }
-            },
-        },
-    });
-
-    let isPlaying = true;
-
-    // Reset all progress circles
-    function resetAllProgressCircles() {
-        const allProgressCircles = document.querySelectorAll('.progress-circle .circle');
-        allProgressCircles.forEach(circle => {
-            circle.style.transition = 'none';
-            circle.style.strokeDashoffset = '100';
-        });
-    }
-
-    // Start the progress circle for the current active bullet
-    function startProgressCircleForCurrentBullet() {
-        const activeBullet = document.querySelector('.swiper-pagination-bullet-active .progress-circle .circle');
-        const circumference = 2 * Math.PI * 15.9155;
-        if (activeBullet) {
-            activeBullet.style.transition = `stroke-dashoffset 3000ms linear`;
-            activeBullet.style.strokeDasharray = `${circumference} ${circumference}`;
-            activeBullet.style.strokeDashoffset = '0';
-        }
-    }
-
-    const playPauseButton = document.querySelector('.play-pause-button');
-
-    playPauseButton.addEventListener('click', function () {
-        if (isPlaying) {
-            swiper.autoplay.stop();
-            resetAllProgressCircles(); // Reset the SVG progress when paused
-            playPauseButton.textContent = '';
-            playPauseButton.classList.add('paused');
-        } else {
-            swiper.slideTo(swiper.activeIndex, 0, false); // Reset to the current slide
-            swiper.autoplay.start();
-            startProgressCircleForCurrentBullet();
-            playPauseButton.textContent = '';
-            playPauseButton.classList.remove('paused');
-        }
-        isPlaying = !isPlaying;
-    });
-
-    document.querySelector('.nav-button.next').addEventListener('click', function () {
-        swiper.slideNext();
-    });
-
-    document.querySelector('.nav-button.prev').addEventListener('click', function () {
-        swiper.slidePrev();
-    });
-
-    swiper.on('slideChangeTransitionEnd', function () {
-        if (!isPlaying) {
-            resetAllProgressCircles(); // Ensure the SVG resets after the transition if paused
-        }
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        startProgressCircleForCurrentBullet();
-    });
-
-
-
-    var se1__menuSwiper = new Swiper('.se1__menuSwiper.swiper-container', {
-        slidesPerView: 4,
-        breakpoints: {
-            320: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-        },
-        pagination: {
-            el: '.se1__menuSwiper .swiper-pagination',
-            clickable: true,
-        },
-    });
-
-
-
-    var se2__rightSwiper = new Swiper('.se2__bottomSwiper.swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        observer: true,
-        observeParents: true,
-        navigation: {
-            nextEl: ".se2__top .nav-button.next",
-            prevEl: ".se2__top .nav-button.prev",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: "auto",
-                spaceBetween: 10,
-                freeMode: false
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-        },
-        freeMode: true,
-        scrollbar: {
-            el: ".se2__bottomSwiper .swiper-scrollbar",
-        },
-    });
-
-    var se3__rightSwiper = new Swiper('.se3__rightSwiper.swiper-container', {
+    var se2__rightSwiper = new Swiper('.se2__rightSwiper.swiper-container', {
         slidesPerView: "auto",
         spaceBetween: 50,
         loop: true,
         observer: true,
         observeParents: true,
         navigation: {
-            nextEl: ".se3__left .nav-button.next",
-            prevEl: ".se3__left .nav-button.prev",
+            nextEl: ".se2__left .nav-button.next",
+            prevEl: ".se2__left .nav-button.prev",
         },
         pagination: {
-            el: '.se3__rightSwiper .swiper-pagination',
+            el: '.se2__rightSwiper .swiper-pagination',
             clickable: true,
         },
         breakpoints: {
@@ -434,47 +428,55 @@ function swiperBox() {
 
     });
 
-    var se4__rightSwiper = new Swiper('.se4__bottomSwiper.swiper-container', {
-        slidesPerView: 1,
+    var se3__frontSwiper = new Swiper('.se3__frontSwiper.swiper-container', {
+        slidesPerView: "auto",
         loop: true,
         observer: true,
         observeParents: true,
         navigation: {
-            nextEl: ".se4__bottom .nav-button.next",
-            prevEl: ".se4__bottom .nav-button.prev",
+            nextEl: ".se3__left .nav-button.next",
+            prevEl: ".se3__left .nav-button.prev",
         },
         pagination: {
-            el: '.se4__bottomSwiper .swiper-pagination',
+            el: '.se3__frontSwiper .swiper-pagination',
             clickable: true,
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
             },
             1024: {},
         },
-    });
+        });
 
-    var se5__rightSwiper = new Swiper('.se5__bottomSwiper.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        observer: true,
-        observeParents: true,
-        pagination: {
-            el: '.se5__bottomSwiper .swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        },
-    });
+        // ✅ 첫 번째 슬라이드에 active 추가
+        const slides = document.querySelectorAll('.se3__frontSwiper .swiper-slide');
+        if (slides.length > 0) {
+        slides[0].classList.add('active');
+        }
 
+        // ✅ hover 시 active 토글 (하나만 유지)
+        slides.forEach(slide => {
+        slide.addEventListener('mouseenter', () => {
+            slides.forEach(s => s.classList.remove('active'));
+            slide.classList.add('active');
+        });
+
+        slide.addEventListener('mouseleave', () => {
+            slide.classList.remove('active');
+
+            // ✅ 다른 슬라이드가 hover 중이 아니라면 첫 번째 슬라이드에 active 복구
+            const isAnyHovered = Array.from(slides).some(s =>
+            s.matches(':hover')
+            );
+            if (!isAnyHovered && slides.length > 0) {
+            slides[0].classList.add('active');
+            }
+        });
+        });
 
 
 }
