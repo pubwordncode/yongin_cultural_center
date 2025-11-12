@@ -1,508 +1,944 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no, email=no, address=no">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-    <title>용인문화원</title>
-    <link type="text/css" rel="stylesheet" href="././resource/css/base.css">
-    
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <title>용인문화원</title>
+  <link type="text/css" rel="stylesheet" href="././resource/css/base.css">
+
+
 </head>
+
 <body>
-    <div class="wrap">
-      <div class="bg"></div>
-        <!-- skipNavigation -->
-        <div id="skipNavigation" title="스킵내비게이션">
-            <a href="#nav">메뉴 바로가기</a>
-            <a href="#">본문 바로가기</a>
+  <div class="wrap">
+    <div class="bg"></div>
+    <!-- skipNavigation -->
+    <div id="skipNavigation" title="스킵내비게이션">
+      <a href="#nav">메뉴 바로가기</a>
+      <a href="#">본문 바로가기</a>
+    </div>
+    <!-- //skipNavigation -->
+
+
+
+    <div class="main_popup">
+      <div class="layer_cont">
+        <div class="img-wrap">
+          <a href="https://www.naver.com/" target="_blank">
+            <img src="./resource/image/main/main_pop.png">
+          </a>
         </div>
-        <!-- //skipNavigation -->
+        <div class="btn-wrap bg-white d-flex align-center justify-between">
+          <!-- 오늘 하루 보지 않기 --->
+          <button class="btn_today_close"><span>오늘 하루 보지 않기</span></button>
+
+          <!-- 그냥 닫기 --->
+          <button class="btn_close">닫기</button>
+        </div>
+      </div>
+    </div>
 
 
 
-        <div class="main_popup">
-            <div class="layer_cont">
-              <div class="img-wrap">
-                <a href="https://www.naver.com/" target="_blank">
-                    <img src="./resource/image/main/main_pop.png">
-                </a>
-              </div>
-              <div class="btn-wrap bg-white d-flex align-center justify-between">
-                <!-- 오늘 하루 보지 않기 --->
-                <button class="btn_today_close"><span>오늘 하루 보지 않기</span></button>
-                
-                <!-- 그냥 닫기 --->
-                <button class="btn_close">닫기</button>
-              </div>
+
+    <!--//popup-->
+
+    <!-- header -->
+    <header class="header"></header>
+
+    <!-- //header -->
+    <!-- container -->
+    <div class="container">
+
+      <section class="main-sec se1">
+        <div class="mainVisual">
+          <span class="img-wrap">
+            <img class="cover" src="./resource/image/main/main_visual.png">
+          </span>
+          <div class="info-area">
+            <div class="txt-wrap">
+              <p class="tit">용인디지털기록관</p>
+              <p class="txt">용인의 어제와 오늘을 담아 내일로 이어갑니다.</p>
+            </div>
+            <div class="sch-bar">
+              <input type="text" class="search-input">
+              <button class="search-button"></button>
+            </div>
+            <div class="tag-wrap">
+              <p class="tit">인기검색어</p>
+              <ul class="tags">
+                <li><a href="javascript:void(0)">문화</a></li>
+                <li><a href="javascript:void(0)">용인지역사</a></li>
+                <li><a href="javascript:void(0)">전통</a></li>
+                <li><a href="javascript:void(0)">전시</a></li>
+                <li><a href="javascript:void(0)">공연</a></li>
+                <li><a href="javascript:void(0)">공연</a></li>
+                <li><a href="javascript:void(0)">구술사도서</a></li>
+                <li><a href="javascript:void(0)">용인</a></li>
+              </ul>
             </div>
           </div>
-        
-        
-       
+        </div>
+      </section>
 
-        <!--//popup-->
 
-        <!-- header -->
-        <header class="header"></header>
-        
-        <!-- //header -->
-        <!-- container -->
-        <div class="container">
-          
-            <section class="main-sec se1">
-                <div class="mainVisual">
-                  <span class="img-wrap">
-                    <img class="cover" src="./resource/image/main/main_visual.png">
-                  </span>
-                  <div class="info-area">
-                    <div class="txt-wrap">
-                      <p class="tit">용인디지털기록관</p>
-                      <p class="txt">용인의 어제와 오늘을 담아 내일로 이어갑니다.</p>
+      <section class="main-sec se2">
+        <div class="se2__inner">
+          <div class="se2__left">
+            <p class="sec-tit">컬렉션</p>
+            <div class="btn_wrap">
+              <button class="nav-button prev"></button>
+              <button class="nav-button next"></button>
+            </div>
+          </div>
+          <div class="se2__right">
+            <div class="se2__rightSwiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-01.svg">
+                      </span>
                     </div>
-                    <div class="sch-bar">
-                      <input type="text" class="search-input">
-                      <button class="search-button"></button>
-                    </div>
-                    <div class="tag-wrap">
-                      <p class="tit">인기검색어</p>
-                      <ul class="tags">
-                        <li><a href="javascript:void(0)">문화</a></li>
-                        <li><a href="javascript:void(0)">용인지역사</a></li>
-                        <li><a href="javascript:void(0)">전통</a></li>
-                        <li><a href="javascript:void(0)">전시</a></li>
-                        <li><a href="javascript:void(0)">공연</a></li>
-                        <li><a href="javascript:void(0)">공연</a></li>
-                        <li><a href="javascript:void(0)">구술사도서</a></li>
-                        <li><a href="javascript:void(0)">용인</a></li>
-                      </ul>
-                    </div>
-                  </div>
+                  </a>
                 </div>
-            </section>
-
-
-            <section class="main-sec se2">
-              <div class="se2__inner">
-                <div class="se2__left">
-                  <p class="sec-tit">컬렉션</p>
-                  <div class="btn_wrap">
-                    <button class="nav-button prev"></button>
-                    <button class="nav-button next"></button>
-                  </div>
-                </div>
-                <div class="se2__right">
-                  <div class="se2__rightSwiper swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <div class="swiper-left">
-                              <span class="img-wrap">
-                                <img src="resource/image/main/se2_rightSwiper01.png">
-                              </span>
-                            </div>
-                            <div class="swiper-right">
-                              <span class="cate">이슈브리프</span>
-                              <span class="tit">심포지엄「2035 NDC의 의미와 추진 방향」요약 보고서</span>
-                              <span class="txt">본 이슈브리프는 2024년 7월 5일 진행되었던 온실가스종합정보센터와 사단법인 넥스트 공동 심포지엄의 주요 내용을 공유하기 위해 발행된 요약 간행물입니다.</span>
-                              <span class="date">2024-08-30 / 송용현, 이지우</span>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <div class="swiper-left">
-                              <span class="img-wrap">
-                                <img src="./resource/image/main/se2_rightSwiper02.png">
-                              </span>
-                            </div>
-                            <div class="swiper-right">
-                              <span class="cate">이슈브리프</span>
-                              <span class="tit">심포지엄「2035 NDC의 의미와 추진 방향」요약 보고서</span>
-                              <span class="txt">본 이슈브리프는 2024년 7월 5일 진행되었던 온실가스종합정보센터와 사단법인 넥스트 공동 심포지엄의 주요 내용을 공유하기 위해 발행된 요약 간행물입니다.</span>
-                              <span class="date">2024-08-30 / 송용현, 이지우</span>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <div class="swiper-left">
-                              <span class="img-wrap">
-                                <img src="./resource/image/main/se2_rightSwiper03.png">
-                              </span>
-                            </div>
-                            <div class="swiper-right">
-                              <span class="cate">이슈브리프</span>
-                              <span class="tit">심포지엄「2035 NDC의 의미와 추진 방향」요약 보고서</span>
-                              <span class="txt">본 이슈브리프는 2024년 7월 5일 진행되었던 온실가스종합정보센터와 사단법인 넥스트 공동 심포지엄의 주요 내용을 공유하기 위해 발행된 요약 간행물입니다.</span>
-                              <span class="date">2024-08-30 / 송용현, 이지우</span>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <div class="swiper-left">
-                              <span class="img-wrap">
-                                <img src="./resource/image/main/se2_rightSwiper01.png">
-                              </span>
-                            </div>
-                            <div class="swiper-right">
-                              <span class="cate">이슈브리프</span>
-                              <span class="tit">심포지엄「2035 NDC의 의미와 추진 방향」요약 보고서</span>
-                              <span class="txt">본 이슈브리프는 2024년 7월 5일 진행되었던 온실가스종합정보센터와 사단법인 넥스트 공동 심포지엄의 주요 내용을 공유하기 위해 발행된 요약 간행물입니다.</span>
-                              <span class="date">2024-08-30 / 송용현, 이지우</span>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <div class="swiper-left">
-                              <span class="img-wrap">
-                                <img src="./resource/image/main/se2_rightSwiper02.png">
-                              </span>
-                            </div>
-                            <div class="swiper-right">
-                              <span class="cate">이슈브리프</span>
-                              <span class="tit">심포지엄「2035 NDC의 의미와 추진 방향」요약 보고서</span>
-                              <span class="txt">본 이슈브리프는 2024년 7월 5일 진행되었던 온실가스종합정보센터와 사단법인 넥스트 공동 심포지엄의 주요 내용을 공유하기 위해 발행된 요약 간행물입니다.</span>
-                              <span class="date">2024-08-30 / 송용현, 이지우</span>
-                            </div>
-                          </a>
-                        </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-02.svg">
+                      </span>
                     </div>
-            
-                    <!-- Pagination Bullets -->
-                    <div class="swiper-pagination"></div>
-            
-                    
-                    
-                  </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-03.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-04.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-05.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-01.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-02.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-03.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-04.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se2-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se2-icon-05.svg">
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </section>
 
-            
-            <section class="main-sec se3">
-              <div class="se3__inner">
-                <div class="se3__back">
-                  <span class="img-wrap">
-                    <img class="cover" src="./resource/image/main/se3__back.jpg">
-                  </span>
+              <!-- Pagination Bullets -->
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-pagination"></div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-sec se3">
+        <div class="se3__inner">
+          <div class="se3__left">
+            <p class="sec-tit">분류별 자료</p>
+          </div>
+          <div class="se3__right">
+            <div class="accordion">
+              <div class="accordion__item">
+                <button class="accordion__header active">유형별</button>
+                <div class="accordion__content open">
+                  <ul class="blur-block columnn-row-4-3">
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">사진</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-01.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">도서간행물</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-02.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">박물류</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-03.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">전자책</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-04.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">영상</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-05.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">지도</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-06.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">문서</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-07.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">고문헌</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-08.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="last1">
+                      <a href="javascript:void(0)">
+                        <p class="tit">그림</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-09.svg">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="last2">
+                      <a href="javascript:void(0)">
+                        <p class="tit">기타</p>
+                        <span class="icon-wrap">
+                          <img src="./resource/image/main/se3-01-10.svg">
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="se3__front">
-                  <p class="sec-tit">카테고리</p>
-                    <div class="se3__frontSwiper swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <span class="img-wrap">
-                            <img class="cover" src="./resource/image/main/se3__list-01.jpg">
-                          </span>
-                          <div class="tag-wrap">
-                            <p class="tit">#장소</p>
-                            <ul class="tags">
-                              <li><a href="javascript:void(0)">이발관</a></li>
-                              <li><a href="javascript:void(0)">마을회관</a></li>
-                              <li><a href="javascript:void(0)">결혼식</a></li>
-                              <li><a href="javascript:void(0)">기념비</a></li>
-                              <li><a href="javascript:void(0)">마을</a></li>
-                              <li><a href="javascript:void(0)">학교</a></li>
-                              <li><a href="javascript:void(0)">집</a></li>
-                              <li><a href="javascript:void(0)">민속촌</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <span class="img-wrap">
-                            <img class="cover" src="./resource/image/main/se3__list-02.jpg">
-                          </span>
-                          <div class="tag-wrap">
-                            <p class="tit">#문화유산</p>
-                            <ul class="tags">
-                              <li><a href="javascript:void(0)">이발관</a></li>
-                              <li><a href="javascript:void(0)">마을회관</a></li>
-                              <li><a href="javascript:void(0)">결혼식</a></li>
-                              <li><a href="javascript:void(0)">기념비</a></li>
-                              <li><a href="javascript:void(0)">마을</a></li>
-                              <li><a href="javascript:void(0)">학교</a></li>
-                              <li><a href="javascript:void(0)">집</a></li>
-                              <li><a href="javascript:void(0)">민속촌</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <span class="img-wrap">
-                            <img class="cover" src="./resource/image/main/se3__list-03.jpg">
-                          </span>
-                          <div class="tag-wrap">
-                            <p class="tit">#인물</p>
-                            <ul class="tags">
-                              <li><a href="javascript:void(0)">이발관</a></li>
-                              <li><a href="javascript:void(0)">마을회관</a></li>
-                              <li><a href="javascript:void(0)">결혼식</a></li>
-                              <li><a href="javascript:void(0)">기념비</a></li>
-                              <li><a href="javascript:void(0)">마을</a></li>
-                              <li><a href="javascript:void(0)">학교</a></li>
-                              <li><a href="javascript:void(0)">집</a></li>
-                              <li><a href="javascript:void(0)">민속촌</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <span class="img-wrap">
-                            <img class="cover" src="./resource/image/main/se3__list-04.jpg">
-                          </span>
-                          <div class="tag-wrap">
-                            <p class="tit">#독립운동</p>
-                            <ul class="tags">
-                              <li><a href="javascript:void(0)">이발관</a></li>
-                              <li><a href="javascript:void(0)">마을회관</a></li>
-                              <li><a href="javascript:void(0)">결혼식</a></li>
-                              <li><a href="javascript:void(0)">기념비</a></li>
-                              <li><a href="javascript:void(0)">마을</a></li>
-                              <li><a href="javascript:void(0)">학교</a></li>
-                              <li><a href="javascript:void(0)">집</a></li>
-                              <li><a href="javascript:void(0)">민속촌</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <span class="img-wrap">
-                            <img class="cover" src="./resource/image/main/se3__list-05.jpg">
-                          </span>
-                          <div class="tag-wrap">
-                            <p class="tit">#역사</p>
-                            <ul class="tags">
-                              <li><a href="javascript:void(0)">이발관</a></li>
-                              <li><a href="javascript:void(0)">마을회관</a></li>
-                              <li><a href="javascript:void(0)">결혼식</a></li>
-                              <li><a href="javascript:void(0)">기념비</a></li>
-                              <li><a href="javascript:void(0)">마을</a></li>
-                              <li><a href="javascript:void(0)">학교</a></li>
-                              <li><a href="javascript:void(0)">집</a></li>
-                              <li><a href="javascript:void(0)">민속촌</a></li>
-                            </ul>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__header">지역별</button>
+                <div class="accordion__content">
+                  <ul class="blur-block columnn-row-1-3">
+                    <li>
+                      <p class="tit">수지구</p>
+                      <div class="custom-select">
+                        <div class="select-selected">지역 선택</div>
+                        <div class="select-items-wrapper">
+                          <div class="select-items select-hide">
+                            <div data-value="option1">옵션 1</div>
+                            <div data-value="option2">옵션 2</div>
+                            <div data-value="option3">옵션 3</div>
+                            <div data-value="option4">옵션 4</div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </li>
+                    <li>
+                      <p class="tit">기흥구</p>
+                      <div class="custom-select">
+                        <div class="select-selected">지역 선택</div>
+                        <div class="select-items-wrapper">
+                          <div class="select-items select-hide">
+                            <div data-value="option1">옵션 1</div>
+                            <div data-value="option2">옵션 2</div>
+                            <div data-value="option3">옵션 3</div>
+                            <div data-value="option4">옵션 4</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit">처인구</p>
+                      <div class="custom-select">
+                        <div class="select-selected">지역 선택</div>
+                        <div class="select-items-wrapper">
+                          <div class="select-items select-hide">
+                            <div data-value="option1">옵션 1</div>
+                            <div data-value="option2">옵션 2</div>
+                            <div data-value="option3">옵션 3</div>
+                            <div data-value="option4">옵션 4</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </section>
 
-            
-
-            <section class="main-sec se4">
-              <div class="se4__inner">
-                <div class="se4__left">
-                  <p class="sec-tit">아카이브 데이터 현황</p>
-                  <div class="btn_wrap">
-                    <button class="nav-button prev"></button>
-                    <button class="nav-button next"></button>
-                  </div>
-                </div>
-                <div class="se4__right">
-                </div>
-              </div>
-            </section>
-
-
-            <section class="main-sec se5">
-              <div class="se5__inner">
-                <div class="se5__top">
-                  <p class="tit">YOUTUBE</p>
-                </div>
-                <div class="se5__bottom">
-                  <div class="se5__bottomSwiper swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <span class="img-wrap">
-                              <img src="./resource/image/main/se5_bottomSwiper01.png">
-                            </span>
-                            <span class="tit">
-                              태양광: 초보자를 위한 가이드
-                            </span>
-                            <span class="date">
-                              2024-05-16
-                            </span>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <span class="img-wrap">
-                              <img src="./resource/image/main/se5_bottomSwiper02.png">
-                            </span>
-                            <span class="tit">
-                              태양광: 초보자를 위한 가이드
-                            </span>
-                            <span class="date">
-                              2024-05-16
-                            </span>
-                          </a>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="javascript:void(0)" class="item">
-                            <span class="img-wrap">
-                              <img src="./resource/image/main/se5_bottomSwiper03.png">
-                            </span>
-                            <span class="tit">
-                              태양광: 초보자를 위한 가이드
-                            </span>
-                            <span class="date">
-                              2024-05-16
-                            </span>
-                          </a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div>
+              <div class="accordion__item">
+                <button class="accordion__header">연대별</button>
+                <div class="accordion__content">
+                  <ul class="blur-block column-row-3-2">
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">용인현</p>
+                        <p class="txt">1898년<br>이전</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">용인군</p>
+                        <p class="txt">1895년<br>~1944년</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                        <p class="tit">용인군</p>
+                        <p class="txt">1945년<br>~1995년</p>
+                      </a>
+                    </li>
+                    <li class="last1">
+                      <a href="javascript:void(0)">
+                        <p class="tit">용인시</p>
+                        <p class="txt">1996년<br>~2022년</p>
+                      </a>
+                    </li>
+                    <li class="last2">
+                      <a href="javascript:void(0)">
+                        <p class="tit">용인특례시</p>
+                        <p class="txt">2022년<br>이후</p>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </section>
-
-
-        </div>
-
-
-        
-        <!-- //container -->
-        <!-- footer -->
-        <footer class="footer"></footer>
-        
-        <!-- //footer -->
-
-        
-
-
-        <!-- layer -->
-        <div class="pop-wrap">
-            <div class="pop-bg"></div>
-            <div class="pop-cont abstract_wrap">
-                <div class="abstract_cont contact" id="contact-pop">
-                    <div class="abstract_cont__inner">
-                        <div class="btn-wrap close d-flex justify-end">
-                            <button title="팝업 닫기  " type="button"><span class="hidden">팝업 닫기</span></button>
-                        </div>
-                        <p class="popTit">1:1문의하기</p>
-                        
-                        <div class="detail-table detail-table--write table-glass table-height--43">
-                            <table>
-                              <colgroup>
-                                <col style="width:13rem">
-                                <col style="width:auto">
-                              </colgroup>
-                              <tbody>
-                                
-                                <tr>
-                                  <th>이메일
-                                    <span class="ui-require"><span class="for-a11y">(필수)</span></span>
-                                  </th>
-                                  <td>
-                                    <div class="ui-input-block">
-                                        <input type="text" class="ui-input input-height-43 input-width-full" title="이메일" placeholder="E-mail을 입력해주세요.">
-                                      </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th>제목
-                                    <span class="ui-require"><span class="for-a11y">(필수)</span></span>
-                                  </th>
-                                  <td>
-                                    <div class="ui-input-block">
-                                        <input type="text" class="ui-input input-height-43 input-width-full" title="제목" placeholder="제목을 입력해주세요.">
-                                      </div>
-                                  </td>
-                                </tr>
-                                
-                                <tr>
-                                  <th>내용<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
-                                  <td>
-                                    <div class="ui-input-block">
-                                      <textarea class="ui-input input-height-190 input-width-full" title="내용" placeholder="내용을 입력해주세요."></textarea>
-                                    </div>
-                                  </td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
-                          </div>
-
-
-                          <div class="detail-table detail-table--explan table-glass">
-                            <table>
-                              <caption>Q&amp;A 등록</caption>
-                              <colgroup>
-                                  <col class="ver-th">
-                              </colgroup>
-                
-                              <tbody>
-                                    <tr>
-                                        <th>이용약관</th>
-                                    </tr>
-                                  <tr>
-                                      
-                                      <td>
-                                        <div class="y-scroll ui-scroller">
-                                            <p class="txt">
-                                                <span>
-                                                개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
-                                                보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍
-                                                니다.</span>
-                                                
-                                                <span>
-                                                1. 수집하는 개인정보
-                                                이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 Next group 동의 거부권 및 동의 거부 시 불이익
-                                                에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.</span>
-                                                
-                                                <span>
-                                                개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
-                                                </span>
-                                                <span>
-                                                개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
-                                                보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍
-                                                니다.</span>
-                                                
-                                                <span>
-                                                1. 수집하는 개인정보
-                                                이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 Next group 동의 거부권 및 동의 거부 시 불이익
-                                                에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.</span>
-
-                                                <span>
-                                                개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
-                                                </span>
-                                            </p>
-                                          </div>
-                                        </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                          </div>
-
-                          <div class="ui-form agree-wrap">
-                            <div class="ui-checkbox-block-wrap">
-                              <div class="ui-checkbox-block justify-center">
-                                <input type="checkbox" class="ui-checkbox" id="checkbox1">
-                                <label for="checkbox1" class="ui-label">
-                                  <span class="ui-label__text">위 내용에 동의합니다.</span>
-                                </label>
-                              </div>
-                            </div>
-                            
-                          </div>
-                        
-                        <div class="btn-wrap btn-wrap--center">
-                            <button type="button" class="btn btn-send popup if-check bg-white border-black">보내기</button>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-        <!-- //layer -->
+      </section>
+
+      <section class="main-sec se4">
+        <div class="se4__inner">
+          <div class="se4__left">
+            <p class="sec-tit">최신자료</p>
+            <div class="btn_wrap">
+              <button class="nav-button prev"></button>
+              <button class="nav-button next"></button>
+            </div>
+          </div>
+          <div class="se4__right">
+            <div class="se4__rightSwiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-01.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-02.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-03.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-04.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-05.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-01.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-02.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-03.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-04.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="item">
+                    <div class="se4-item">
+                      <span class="cate"></span>
+                      <span class="tit">마을지</span>
+                      <span class="txt">마을지에 관련된 페이지로 이동</span>
+                      <span class="img-wrap">
+                        <img src="./resource/image/main/se4-icon-05.svg">
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Pagination Bullets -->
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-pagination"></div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="main-sec se5">
+        <div class="se5__inner">
+          <div class="se5__back">
+            <span class="img-wrap">
+              <img class="cover" src="./resource/image/main/se5__back.jpg">
+            </span>
+          </div>
+          <div class="se5__front">
+            <p class="sec-tit">카테고리</p>
+            <div class="se5__frontSwiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="img-wrap">
+                    <img class="cover" src="./resource/image/main/se5__list-01.jpg">
+                  </span>
+                  <div class="tag-wrap">
+                    <p class="tit">#장소</p>
+                    <ul class="tags">
+                      <li><a href="javascript:void(0)">이발관</a></li>
+                      <li><a href="javascript:void(0)">마을회관</a></li>
+                      <li><a href="javascript:void(0)">결혼식</a></li>
+                      <li><a href="javascript:void(0)">기념비</a></li>
+                      <li><a href="javascript:void(0)">마을</a></li>
+                      <li><a href="javascript:void(0)">학교</a></li>
+                      <li><a href="javascript:void(0)">집</a></li>
+                      <li><a href="javascript:void(0)">민속촌</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="img-wrap">
+                    <img class="cover" src="./resource/image/main/se5__list-02.jpg">
+                  </span>
+                  <div class="tag-wrap">
+                    <p class="tit">#문화유산</p>
+                    <ul class="tags">
+                      <li><a href="javascript:void(0)">이발관</a></li>
+                      <li><a href="javascript:void(0)">마을회관</a></li>
+                      <li><a href="javascript:void(0)">결혼식</a></li>
+                      <li><a href="javascript:void(0)">기념비</a></li>
+                      <li><a href="javascript:void(0)">마을</a></li>
+                      <li><a href="javascript:void(0)">학교</a></li>
+                      <li><a href="javascript:void(0)">집</a></li>
+                      <li><a href="javascript:void(0)">민속촌</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="img-wrap">
+                    <img class="cover" src="./resource/image/main/se5__list-03.jpg">
+                  </span>
+                  <div class="tag-wrap">
+                    <p class="tit">#인물</p>
+                    <ul class="tags">
+                      <li><a href="javascript:void(0)">이발관</a></li>
+                      <li><a href="javascript:void(0)">마을회관</a></li>
+                      <li><a href="javascript:void(0)">결혼식</a></li>
+                      <li><a href="javascript:void(0)">기념비</a></li>
+                      <li><a href="javascript:void(0)">마을</a></li>
+                      <li><a href="javascript:void(0)">학교</a></li>
+                      <li><a href="javascript:void(0)">집</a></li>
+                      <li><a href="javascript:void(0)">민속촌</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="img-wrap">
+                    <img class="cover" src="./resource/image/main/se5__list-04.jpg">
+                  </span>
+                  <div class="tag-wrap">
+                    <p class="tit">#독립운동</p>
+                    <ul class="tags">
+                      <li><a href="javascript:void(0)">이발관</a></li>
+                      <li><a href="javascript:void(0)">마을회관</a></li>
+                      <li><a href="javascript:void(0)">결혼식</a></li>
+                      <li><a href="javascript:void(0)">기념비</a></li>
+                      <li><a href="javascript:void(0)">마을</a></li>
+                      <li><a href="javascript:void(0)">학교</a></li>
+                      <li><a href="javascript:void(0)">집</a></li>
+                      <li><a href="javascript:void(0)">민속촌</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="img-wrap">
+                    <img class="cover" src="./resource/image/main/se5__list-05.jpg">
+                  </span>
+                  <div class="tag-wrap">
+                    <p class="tit">#역사</p>
+                    <ul class="tags">
+                      <li><a href="javascript:void(0)">이발관</a></li>
+                      <li><a href="javascript:void(0)">마을회관</a></li>
+                      <li><a href="javascript:void(0)">결혼식</a></li>
+                      <li><a href="javascript:void(0)">기념비</a></li>
+                      <li><a href="javascript:void(0)">마을</a></li>
+                      <li><a href="javascript:void(0)">학교</a></li>
+                      <li><a href="javascript:void(0)">집</a></li>
+                      <li><a href="javascript:void(0)">민속촌</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="main-sec se6">
+        <div class="se6__inner">
+          <div class="se6__left">
+            <p class="sec-tit">아카이브 데이터 현황</p>
+            <ul class="tab__list">
+              <li class="tab__item active" data-tab="tab1">지역별</li>
+              <li class="tab__item" data-tab="tab2">유형별</li>
+              <li class="tab__item" data-tab="tab3">연대별</li>
+            </ul>
+          </div>
+          <div class="se6__right">
+            <div class="tab__contents">
+              <div class="tab__content active" id="tab1">
+                <ul>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-01.svg">
+                    </span>
+                    <p class="tit">사진</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-02.svg">
+                    </span>
+                    <p class="tit">도서간행물</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-03.svg">
+                    </span>
+                    <p class="tit">박물류</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-04.svg">
+                    </span>
+                    <p class="tit">전자책</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-05.svg">
+                    </span>
+                    <p class="tit">영상</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-06.svg">
+                    </span>
+                    <p class="tit">지도</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-07.svg">
+                    </span>
+                    <p class="tit">문서</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                  <li>
+                    <span class="img-wrap">
+                      <img src="./resource/image/main/se6_02-08.svg">
+                    </span>
+                    <p class="tit">고문헌</p>
+                    <p class="txt"><span class="count">34,560</span>건</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__content" id="tab2">
+                <p>탭 2의 내용입니다.</p>
+              </div>
+              <div class="tab__content" id="tab3">
+                <p>탭 3의 내용입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="main-sec se7">
+        <div class="se7__inner">
+          <div class="se7__top">
+            <div class="se7__top__inner">
+              <p class="tit">당신이 남긴 사진 한 장, 기록 한 줄이<br> 용인의 문화와 일상을 이어주는 소중한 기억이 됩니다.</p>
+              <p class="txt">사진 · 문서 · 영상 등 지역의 삶을 담은 자료를 기증받습니다.</p>
+              <a href="">자료 기증하기</a>
+            </div>
+          </div>
+          <div class="se7__bottom">
+            <div class="se7__bottom__inner">
+              <ul class="logo-list">
+                <li>
+                  <a class="img-wrap" href="https://council.yongin.go.kr" target="_blank">
+                    <img src="./resource/image/main/se7-icon-01.svg">
+                  </a>
+                </li>
+                <li>
+                  <a class="img-wrap" href="https://www.yongin.re.kr/" target="_blank">
+                    <img src="./resource/image/main/se7-icon-02.svg">
+                  </a>
+                </li>
+                <li>
+                  <a class="img-wrap" href="https://www.kccf.or.kr" target="_blank">
+                    <img src="./resource/image/main/se7-icon-03.svg">
+                  </a>
+                </li>
+                <li>
+                  <a class="img-wrap" href="https://www.aks.ac.kr/index.do" target="_blank">
+                    <img src="./resource/image/main/se7-icon-04.svg">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </div>
+
+
+
+    <!-- //container -->
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+    <!-- //footer -->
+
+
+
+
+    <!-- layer -->
+    <div class="pop-wrap">
+      <div class="pop-bg"></div>
+      <div class="pop-cont abstract_wrap">
+        <div class="abstract_cont contact" id="contact-pop">
+          <div class="abstract_cont__inner">
+            <div class="btn-wrap close d-flex justify-end">
+              <button title="팝업 닫기  " type="button"><span class="hidden">팝업 닫기</span></button>
+            </div>
+            <p class="popTit">1:1문의하기</p>
+
+            <div class="detail-table detail-table--write table-glass table-height--43">
+              <table>
+                <colgroup>
+                  <col style="width:13rem">
+                  <col style="width:auto">
+                </colgroup>
+                <tbody>
+
+                  <tr>
+                    <th>이메일
+                      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                    </th>
+                    <td>
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input input-height-43 input-width-full" title="이메일"
+                          placeholder="E-mail을 입력해주세요.">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>제목
+                      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                    </th>
+                    <td>
+                      <div class="ui-input-block">
+                        <input type="text" class="ui-input input-height-43 input-width-full" title="제목"
+                          placeholder="제목을 입력해주세요.">
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>내용<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                    <td>
+                      <div class="ui-input-block">
+                        <textarea class="ui-input input-height-190 input-width-full" title="내용"
+                          placeholder="내용을 입력해주세요."></textarea>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="detail-table detail-table--explan table-glass">
+              <table>
+                <caption>Q&amp;A 등록</caption>
+                <colgroup>
+                  <col class="ver-th">
+                </colgroup>
+
+                <tbody>
+                  <tr>
+                    <th>이용약관</th>
+                  </tr>
+                  <tr>
+
+                    <td>
+                      <div class="y-scroll ui-scroller">
+                        <p class="txt">
+                          <span>
+                            개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
+                            보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍
+                            니다.</span>
+
+                          <span>
+                            1. 수집하는 개인정보
+                            이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 Next group 동의 거부권 및 동의 거부 시 불이익
+                            에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.</span>
+
+                          <span>
+                            개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
+                          </span>
+                          <span>
+                            개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
+                            보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍
+                            니다.</span>
+
+                          <span>
+                            1. 수집하는 개인정보
+                            이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 Next group 동의 거부권 및 동의 거부 시 불이익
+                            에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.</span>
+
+                          <span>
+                            개인정보보호법에 따라 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="ui-form agree-wrap">
+              <div class="ui-checkbox-block-wrap">
+                <div class="ui-checkbox-block justify-center">
+                  <input type="checkbox" class="ui-checkbox" id="checkbox1">
+                  <label for="checkbox1" class="ui-label">
+                    <span class="ui-label__text">위 내용에 동의합니다.</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="btn-wrap btn-wrap--center">
+              <button type="button" class="btn btn-send popup if-check bg-white border-black">보내기</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //layer -->
+
+  </div>
 
 </body>
 

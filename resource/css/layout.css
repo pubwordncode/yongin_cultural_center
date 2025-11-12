@@ -37,18 +37,6 @@ body.overflow-hidden .header .header__inner {
   margin: 0 auto;
   position: relative;
 }
-.container:after {
-  content: "";
-  width: 192rem;
-  height: 59.2rem;
-  display: block;
-  z-index: -1;
-  left: 0;
-  /* top: 0; */
-  bottom: 0;
-  position: absolute;
-  background: url(../image/main/mainBottom_bg.jpg) no-repeat center/contain;
-}
 
 .header {
   margin: 0 auto;
@@ -76,29 +64,25 @@ body.overflow-hidden .header .header__inner {
 }
 
 .footer {
-  height: 22rem;
-  width: 192rem;
   margin: 0 auto;
-  background: #002237;
+  background: #05020F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .footer__inner {
-  gap: 0 6rem;
-  grid-gap: 0 6rem;
-  border-top: 1px solid #133143;
   /* height: 22rem; */
-  width: 140rem;
-  padding: 5.45rem 0;
+  width: 144rem;
   max-width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 17rem 1fr;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  padding: 8rem 0;
 }
 
 .sub-container {

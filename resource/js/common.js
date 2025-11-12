@@ -8,10 +8,10 @@ fetch("../../include/header.html")
         document.querySelector(".header").innerHTML = data;
         isHeaderLoaded = true; // header 로드 완료 표시
         initHeader();
-});
+    });
 // 헤더 관련
-function initHeader(){
-    $(document).ready(function() {
+function initHeader() {
+    $(document).ready(function () {
         // a와 b 선택
         const $aItems = $('.navigation.depth_1 > li');
         const $bItems = $('.depth_2');
@@ -27,12 +27,12 @@ function initHeader(){
             let maxHeight = 0;
 
             // 모든 depth_2의 높이를 측정하여 최대 높이 찾기
-            $bItems.each(function() {
+            $bItems.each(function () {
                 maxHeight = Math.max(maxHeight, $(this).outerHeight());
             });
 
             // 모든 depth_2의 높이를 최대 높이에 맞춰 조정
-            $bItems.each(function() {
+            $bItems.each(function () {
                 $(this).css('height', maxHeight + 'px'); // 모든 .depth_2의 높이를 최대 높이로 설정
             });
 
@@ -46,7 +46,7 @@ function initHeader(){
             const $relatedBItems = $aItem.find('.depth_2'); // 해당 aItem에 포함된 depth_2 선택
 
             let maxHeight = 0;
-            $relatedBItems.each(function() {
+            $relatedBItems.each(function () {
                 maxHeight = Math.max(maxHeight, $(this).outerHeight()); // 해당 depth_2의 최대 높이 측정
             });
 
@@ -58,11 +58,11 @@ function initHeader(){
         $bgElement.css('height', '0'); // 초기 상태에서 .bg의 높이를 0으로 설정
 
         // a의 각 항목에 대한 이벤트 설정
-        $aItems.each(function(index) {
+        $aItems.each(function (index) {
             const $aItem = $(this);
             const $bItem = $bItems.eq(index);
 
-            $aItem.on('mouseenter', function() {
+            $aItem.on('mouseenter', function () {
                 $headerElement.addClass('active');
                 updateBgHeight(); // bg 높이 업데이트
                 updateNaviBgHeight($aItem); // navi-bg 높이 업데이트
@@ -72,7 +72,7 @@ function initHeader(){
                 }
             });
 
-            $aItem.on('mouseleave', function() {
+            $aItem.on('mouseleave', function () {
                 // aItem에서 나가면 active 클래스를 제거
                 $aItem.removeClass('active');
                 if ($bItem.length) {
@@ -87,11 +87,11 @@ function initHeader(){
         });
 
         // b의 각 항목에 대한 이벤트 설정
-        $bItems.each(function(index) {
+        $bItems.each(function (index) {
             const $bItem = $(this);
             const $aItem = $aItems.eq(index);
 
-            $bItem.on('mouseenter', function() {
+            $bItem.on('mouseenter', function () {
                 $headerElement.addClass('active');
                 updateBgHeight(); // bg 높이 업데이트
                 updateNaviBgHeight($aItem); // navi-bg 높이 업데이트
@@ -99,7 +99,7 @@ function initHeader(){
                 $bItem.addClass('active'); // 해당 bItem의 active 상태 유지
             });
 
-            $bItem.on('mouseleave', function(event) {
+            $bItem.on('mouseleave', function (event) {
                 // .depth_2에서 나가면 active 클래스를 제거
                 $bItem.removeClass('active');
 
@@ -113,7 +113,7 @@ function initHeader(){
         });
 
         // bg와 header를 벗어났을 때 처리
-        $(document).on('mouseleave', function(event) {
+        $(document).on('mouseleave', function (event) {
             if (!$headerElement.is(event.relatedTarget) && !$bgElement.is(event.relatedTarget)) {
                 $headerElement.removeClass('active'); // header에서 active 클래스 제거
                 resetBgHeight(); // bg 높이 초기화
@@ -121,7 +121,7 @@ function initHeader(){
         });
 
         // container에 마우스가 올라갔을 때 header active 제거
-        $containerElement.on('mouseenter', function() {
+        $containerElement.on('mouseenter', function () {
             $headerElement.removeClass('active'); // header에서 active 클래스 제거
             resetBgHeight(); // bg 높이 초기화
         });
@@ -136,16 +136,16 @@ function initHeader(){
             $('.navi-bg').css('height', '0'); // 모든 navi-bg 요소 높이를 0으로 설정
         }
 
-        $('.depth_2 > li').each(function() {
+        $('.depth_2 > li').each(function () {
             const $item = $(this);
-            $item.on('mouseenter', function() {
+            $item.on('mouseenter', function () {
                 // Remove 'active' class from all siblings
                 $item.siblings().removeClass('active');
                 // Add 'active' class to the hovered item
                 $item.addClass('active');
             });
 
-            $item.on('mouseleave', function() {
+            $item.on('mouseleave', function () {
                 // Remove 'active' class when mouse leaves
                 $item.removeClass('active');
             });
@@ -154,21 +154,25 @@ function initHeader(){
 }
 // footer fetch
 fetch("../../include/footer.html")
-.then(response => response.text())
-.then(data => {
-    document.querySelector(".footer").innerHTML = data;
-    isFooterLoaded = true; // footer 로드 완료 표시
-    initFooter();
-});
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector(".footer").innerHTML = data;
+        isFooterLoaded = true; // footer 로드 완료 표시
+        initFooter();
+    });
 // 푸터 관련
-function initFooter(){
+function initFooter() {
 
 }
 $(document).ready(function () {
     simpleBar();
     sideMenu();
     swiperBox();
+    tabMenu();
+    accordion();
+    customSelect();
 });
+
 function simpleBar() {
     if (typeof SimpleBar !== 'undefined') { // SimpleBar가 정의되어 있을 때만 실행
         // 첫 번째 .x-scroll 요소들에 대해 SimpleBar 초기화
@@ -196,6 +200,7 @@ function simpleBar() {
 
 
 }
+
 function sideMenu() {
 
     /* 모바일 따로 씀 */
@@ -394,6 +399,7 @@ sideMenu();
 window.addEventListener('resize', function () {
     sideMenu();
 });
+
 function swiperBox() {
 
 
@@ -403,14 +409,31 @@ function swiperBox() {
         loop: true,
         observer: true,
         observeParents: true,
+
+        // ✅ 스크롤(드래그) 및 마우스 휠 이동 허용
+        mousewheel: {
+            forceToAxis: true, // 세로 스크롤 방지하고 가로로만 작동
+            sensitivity: 1,
+        },
+        grabCursor: true, // 마우스 커서 손 모양으로 변경 (드래그 가능)
+
+        // ✅ 스크롤바 추가 (선택)
+        scrollbar: {
+            el: ".se2__rightSwiper .swiper-scrollbar",
+            draggable: true,
+            hide: false,
+        },
+
         navigation: {
             nextEl: ".se2__left .nav-button.next",
             prevEl: ".se2__left .nav-button.prev",
         },
+
         pagination: {
             el: '.se2__rightSwiper .swiper-pagination',
             clickable: true,
         },
+
         breakpoints: {
             320: {
                 loop: true,
@@ -420,46 +443,90 @@ function swiperBox() {
             },
             1024: {
                 slidesPerView: "auto",
-                spaceBetween: 50,
+                spaceBetween: 24,
                 centeredSlides: false,
-
             },
         },
-
     });
 
-    var se3__frontSwiper = new Swiper('.se3__frontSwiper.swiper-container', {
+    var se4__rightSwiper = new Swiper('.se4__rightSwiper.swiper-container', {
+        slidesPerView: "auto",
+        spaceBetween: 50,
+        loop: true,
+        observer: true,
+        observeParents: true,
+
+        // ✅ 스크롤(드래그) 및 마우스 휠 이동 허용
+        mousewheel: {
+            forceToAxis: true, // 세로 스크롤 방지하고 가로로만 작동
+            sensitivity: 1,
+        },
+        grabCursor: true, // 마우스 커서 손 모양으로 변경 (드래그 가능)
+
+        // ✅ 스크롤바 추가 (선택)
+        scrollbar: {
+            el: ".se4__rightSwiper .swiper-scrollbar",
+            draggable: true,
+            hide: false,
+        },
+
+        navigation: {
+            nextEl: ".se4__left .nav-button.next",
+            prevEl: ".se4__left .nav-button.prev",
+        },
+
+        pagination: {
+            el: '.se4__rightSwiper .swiper-pagination',
+            clickable: true,
+        },
+
+        breakpoints: {
+            320: {
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: "auto",
+                spaceBetween: 24,
+                centeredSlides: false,
+            },
+        },
+    });
+    
+    var se5__frontSwiper = new Swiper('.se5__frontSwiper.swiper-container', {
         slidesPerView: "auto",
         loop: true,
         observer: true,
         observeParents: true,
         navigation: {
-            nextEl: ".se3__left .nav-button.next",
-            prevEl: ".se3__left .nav-button.prev",
+            nextEl: ".se5__left .nav-button.next",
+            prevEl: ".se5__left .nav-button.prev",
         },
         pagination: {
-            el: '.se3__frontSwiper .swiper-pagination',
+            el: '.se5__frontSwiper .swiper-pagination',
             clickable: true,
         },
         breakpoints: {
             320: {
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
             },
             1024: {},
         },
-        });
+    });
 
-        // ✅ 첫 번째 슬라이드에 active 추가
-        const slides = document.querySelectorAll('.se3__frontSwiper .swiper-slide');
-        if (slides.length > 0) {
+    // ✅ 첫 번째 슬라이드에 active 추가
+    const slides = document.querySelectorAll('.se5__frontSwiper .swiper-slide');
+    if (slides.length > 0) {
         slides[0].classList.add('active');
-        }
+    }
 
-        // ✅ hover 시 active 토글 (하나만 유지)
-        slides.forEach(slide => {
+    // ✅ hover 시 active 토글 (하나만 유지)
+    slides.forEach(slide => {
         slide.addEventListener('mouseenter', () => {
             slides.forEach(s => s.classList.remove('active'));
             slide.classList.add('active');
@@ -470,15 +537,100 @@ function swiperBox() {
 
             // ✅ 다른 슬라이드가 hover 중이 아니라면 첫 번째 슬라이드에 active 복구
             const isAnyHovered = Array.from(slides).some(s =>
-            s.matches(':hover')
+                s.matches(':hover')
             );
             if (!isAnyHovered && slides.length > 0) {
-            slides[0].classList.add('active');
+                slides[0].classList.add('active');
             }
         });
-        });
+    });
 
 
 }
 
+function tabMenu() {
+    const tabItems = document.querySelectorAll('.tab__item');
+    const tabContents = document.querySelectorAll('.tab__content');
 
+    tabItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const target = item.getAttribute('data-tab');
+
+            // 모든 탭 초기화
+            tabItems.forEach(i => i.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // 클릭된 탭만 활성화
+            item.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
+
+}
+
+function accordion() {
+    const accordionHeaders = document.querySelectorAll('.accordion__header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+
+            // 이미 열려 있는 상태면 아무것도 하지 않음
+            if (header.classList.contains('active')) return;
+
+            // 모든 아코디언 닫기
+            accordionHeaders.forEach(h => h.classList.remove('active'));
+            document.querySelectorAll('.accordion__content').forEach(c => c.classList.remove('open'));
+
+            // 클릭한 항목만 열기
+            header.classList.add('active');
+            content.classList.add('open');
+        });
+    });
+
+
+}
+
+function customSelect() {
+    const customSelects = document.querySelectorAll('.custom-select');
+
+    customSelects.forEach(select => {
+        const selected = select.querySelector('.select-selected');
+        const itemsWrapper = select.querySelector('.select-items-wrapper');
+        const items = select.querySelector('.select-items');
+
+        // 선택 영역 클릭 시 열기/닫기
+        selected.addEventListener('click', e => {
+            e.stopPropagation(); // 이벤트 버블링 방지
+            closeAllSelect(select);
+            items.classList.toggle('select-hide');
+            selected.classList.toggle('active');
+        });
+
+        // 옵션 클릭
+        items.querySelectorAll('div').forEach(option => {
+            option.addEventListener('click', () => {
+                selected.textContent = option.textContent;
+                selected.dataset.value = option.dataset.value; // 값 저장
+                items.classList.add('select-hide');
+                selected.classList.remove('active');
+            });
+        });
+    });
+
+    // 다른 셀렉트 닫기
+    function closeAllSelect(except = null) {
+        customSelects.forEach(select => {
+            if (select === except) return;
+            const sel = select.querySelector('.select-selected');
+            const items = select.querySelector('.select-items');
+            items.classList.add('select-hide');
+            sel.classList.remove('active');
+        });
+    }
+
+    // 페이지 클릭 시 모두 닫기
+    document.addEventListener('click', () => closeAllSelect());
+
+
+}
