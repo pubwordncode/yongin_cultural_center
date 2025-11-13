@@ -2249,6 +2249,12 @@ input {
         @include font(3.2, 600, #111);
         line-height: 150%;
         text-align: left;
+        padding-top: 2rem;
+        border-top: 3px solid #05020F;
+        width:22rem;
+        &+.btn_wrap {
+            margin-top: 4rem;
+        }
 
         &+.txt {
             margin-top: 3rem;
@@ -2258,8 +2264,8 @@ input {
 
 section {
     .nav-button {
-        width: 3.4rem;
-        height: 3.4rem;
+        min-width: 3.6rem;
+        height: 3.6rem;
 
         &.prev {
             background: url(../image/main/nav-button-prev.svg) no-repeat center/contain;
@@ -2327,8 +2333,6 @@ section {
         height: 100%;
 
         .btn_wrap {
-            margin-top: 4.5rem;
-
             button {
                 &+button {
                     margin-left: 0.2rem;
@@ -2392,7 +2396,7 @@ section {
             .swiper-scrollbar {
                 position: relative;
                 width: 100%;
-                left:0;
+                left: 0;
             }
 
             .swiper-notification {
@@ -2701,13 +2705,6 @@ section {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        height: 26rem;
-        /* position: relative; */
-        align-items: center;
     }
 
     &__left {
@@ -2717,12 +2714,18 @@ section {
         height: 100%;
 
         .btn_wrap {
-            margin-top: 4.5rem;
+            width: 13rem;
+            display: flex;
+            align-items: center;
 
             button {
                 &+button {
                     margin-left: 0.2rem;
                 }
+            }
+
+            .swiper-pagination {
+                position: unset;
             }
         }
 
@@ -2769,21 +2772,33 @@ section {
         height: 100%;
         overflow: hidden;
 
-        .swiper-slide {
-            width: 24rem;
-            height: 26rem;
-            background: #f7f7f7;
-        }
 
-        .se2__rightSwiper {
+
+        .se4__rightSwiper {
 
             overflow: hidden;
 
             .swiper-scrollbar {
                 position: relative;
                 width: 100%;
-                left:0;
+                left: 0;
             }
+
+            .swiper-slide {
+                width: 24rem;
+                height: 38.1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                a {
+                    width: 100%;
+                    height: 33.5rem;
+                    display: block;
+                    position: relative;
+                }
+            }
+
 
             .swiper-notification {
                 display: none;
@@ -2797,147 +2812,44 @@ section {
                 display: block;
             }
 
-            .se4-item {
-                width: 24rem;
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 26rem;
-
-
-            }
-
 
             .img-wrap {
                 display: block;
-                width: 9rem;
-                height: 9rem;
-                margin-top: 1.8rem;
+                width: 100%;
+                height: 100%;
                 margin-left: auto;
 
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
                 }
             }
 
             .tit,
-            .txt {
-                max-width: 10.6rem;
+            .cate {
                 display: block;
             }
 
             .tit {
-                font-size: 1.8rem;
-                line-height: 150%;
-                font-weight: 500;
                 color: #111;
                 @include ellipsis(2);
             }
 
-            .txt {
-                font-size: 1.6rem;
-                line-height: 150%;
-                font-weight: 400;
-                margin-top: 0.8rem;
+            .cate {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: #000;
                 color: #585858;
-                @include ellipsis(2);
                 word-break: break-word;
             }
+
         }
 
     }
 
-    .swiper-container {
-        height: 100%;
-        overflow: hidden;
 
-        .swiper-wrapper {
-            align-items: center;
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-pagination-bullet {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            margin: 0 5px;
-            background-color: transparent;
-            border-radius: 50%;
-            border: 2px solid #ddd;
-            cursor: pointer;
-        }
-
-        .circular-progress {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .progress-circle {
-            transform: rotate(-90deg);
-        }
-
-        .circle-bg {
-            fill: none;
-            stroke: #e6e6e6;
-            stroke-width: 2.8;
-        }
-
-        .circle {
-            fill: none;
-            stroke-width: 2.8;
-            stroke: #3498db;
-            stroke-linecap: round;
-            transition: stroke-dashoffset 0.35s ease;
-        }
-
-        .play-pause-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-
-            &.paused {
-                background-color: #e74c3c;
-            }
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-
-            &.prev {
-                left: 20px;
-            }
-
-            &.next {
-                right: 20px;
-            }
-        }
-    }
 
 }
 
@@ -3104,8 +3016,6 @@ section {
         }
 
         .btn_wrap {
-            margin-top: 4.5rem;
-
             button {
                 &+button {
                     margin-left: 0.2rem;

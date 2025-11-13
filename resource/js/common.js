@@ -476,8 +476,12 @@ function swiperBox() {
         },
 
         pagination: {
-            el: '.se4__rightSwiper .swiper-pagination',
+            el: '.se4 .btn_wrap .swiper-pagination',
             clickable: true,
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+                 return '<span class="current">' + current + '</span> / ' + total;
+            },
         },
 
         breakpoints: {
@@ -494,7 +498,7 @@ function swiperBox() {
             },
         },
     });
-    
+
     var se5__frontSwiper = new Swiper('.se5__frontSwiper.swiper-container', {
         slidesPerView: "auto",
         loop: true,
